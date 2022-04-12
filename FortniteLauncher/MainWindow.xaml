@@ -1,0 +1,30 @@
+﻿<Window x:Class="FortniteLauncher.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FortniteLauncher"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="291" Width="381"
+    xmlns:ui="http://schemas.modernwpf.com/2019"
+        ui:WindowHelper.UseModernWindowStyle="True">
+    <ui:SimpleStackPanel>
+        <TabControl>
+            <TabItem Header="Game">
+                <ui:TabItemHelper.Icon>
+                    <ui:SymbolIcon Symbol="Play" />
+                </ui:TabItemHelper.Icon>
+            </TabItem>
+            <TabItem Header="LawinServer">
+                <ui:TabItemHelper.Icon>
+                    <ui:SymbolIcon Symbol="Sync" />
+                </ui:TabItemHelper.Icon>
+            </TabItem>
+            <TabItem Header="About">
+                <ui:TabItemHelper.Icon>
+                    <ui:SymbolIcon Symbol="ContactInfo" />
+                </ui:TabItemHelper.Icon>
+            </TabItem>
+        </TabControl>
+    </ui:SimpleStackPanel>
+</Window>
