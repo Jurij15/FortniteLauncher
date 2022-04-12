@@ -9,7 +9,10 @@
 
   <ItemGroup>
     <PackageReference Include="ModernWpfUI" Version="0.9.4" />
-    <PackageReference Include="ModernWpfUI.MahApps" Version="0.9.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Cores\" />
   </ItemGroup>
 
 </Project>
