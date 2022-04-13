@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FortniteLauncher"
         mc:Ignorable="d"
-        Title="FortniteLauncher" Height="291" Width="381" ResizeMode="CanMinimize"
+        Title="FortniteLauncher" Height="304" Width="433" ResizeMode="CanMinimize"
     xmlns:ui="http://schemas.modernwpf.com/2019"
         ui:WindowHelper.UseModernWindowStyle="True">
     <ui:SimpleStackPanel>
@@ -14,15 +14,27 @@
                 <ui:TabItemHelper.Icon>
                     <ui:SymbolIcon Symbol="Play" />
                 </ui:TabItemHelper.Icon>
-                <Grid Height="232">
-                    <Label HorizontalAlignment="Right" Margin="0,10,278,200" Width="93">Fortnite path:</Label>
-                    <TextBox Margin="103,5,10,195"/>
+                <Grid Height="248">
+                    <Label HorizontalAlignment="Right" Margin="0,21,335,205" Width="88">Fortnite path:</Label>
+                    <Label HorizontalAlignment="Right" Margin="0,80,327,148" Width="94">Client 1-5</Label>
+                    <Label HorizontalAlignment="Left" Margin="12,112,0,113" Width="94">Client 6-9.10</Label>
+                    <Label HorizontalAlignment="Left" Margin="12,146,0,78" Width="106">Client 9.40-10.40</Label>
+                    <TextBox Margin="103,10,10,205" FontSize="14" x:Name="PathBOx"/>
+                    <Button Content="LAUNCH!" Margin="0,177,0,0" VerticalAlignment="Top" Height="45" Width="411" HorizontalAlignment="Center"/>
+                    <CheckBox Content="" Margin="120,74,0,0" VerticalAlignment="Top" Width="20"/>
+                    <CheckBox Content="" Margin="120,138,0,0" VerticalAlignment="Top" Width="37"/>
+                    <CheckBox Content="" Margin="120,106,0,0" VerticalAlignment="Top" Width="37"/>
+                    <Button x:Name="ExploreBtn" Click="ExploreBtn_Click" Content="Explore" Margin="302,48,0,0" VerticalAlignment="Top" Width="120"/>
+                    <Image x:Name="SeasonImage" Height="121" Margin="162,48,140,0" VerticalAlignment="Top" Width="131"/>
                 </Grid>
             </TabItem>
             <TabItem Header="LawinServer">
                 <ui:TabItemHelper.Icon>
                     <ui:SymbolIcon Symbol="Sync" />
                 </ui:TabItemHelper.Icon>
+                <Grid Height="248"> 
+                    
+                </Grid>
             </TabItem>
             <TabItem Header="About">
                 <ui:TabItemHelper.Icon>

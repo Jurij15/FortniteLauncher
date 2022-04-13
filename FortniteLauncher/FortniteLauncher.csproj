@@ -5,14 +5,24 @@
     <TargetFramework>net6.0-windows10.0.18362.0</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
+    <UseWindowsForms>True</UseWindowsForms>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="lawinserverImage.png" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="ModernWpfUI" Version="0.9.4" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Cores\" />
+    <Folder Include="Cores\FortniteLaunch\" />
+    <Folder Include="Cores\Server\ServerUpdate\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="lawinserverImage.png" />
   </ItemGroup>
 
 </Project>
