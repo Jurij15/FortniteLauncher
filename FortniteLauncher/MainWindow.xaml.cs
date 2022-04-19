@@ -16,6 +16,8 @@ using System.Windows.Forms;
 using Microsoft.Win32;
 using Microsoft.Windows;
 using System.Drawing;
+using FortniteLauncher.Cores.FortniteLaunch;
+using FortniteLauncher.Cores;
 
 namespace FortniteLauncher
 {
@@ -49,6 +51,15 @@ namespace FortniteLauncher
             string newimage = path + "/FortniteGame/Content/Splash/Splash.png";
             //SeasonImage.Source = new BitmapImage(new Uri(imageath, UriKind.Relative));
             */
+        }
+
+        private void LaunchBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Launch1_5 launch1_5 = new Launch1_5();
+            if (Client_onetofilve.IsChecked == true)
+            {
+                launch1_5.launchFN();
+            }
         }
     }
 }

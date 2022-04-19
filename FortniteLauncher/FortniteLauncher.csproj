@@ -17,7 +17,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Cores\FortniteLaunch\" />
     <Folder Include="Cores\Server\ServerUpdate\" />
   </ItemGroup>
 
