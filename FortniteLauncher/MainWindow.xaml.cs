@@ -28,6 +28,7 @@ namespace FortniteLauncher
         public MainWindow()
         {
             InitializeComponent();
+            OnStartup.Start();
         }
 
         private void ExploreBtn_Click(object sender, RoutedEventArgs e)

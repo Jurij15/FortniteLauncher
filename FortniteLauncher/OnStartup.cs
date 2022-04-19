@@ -11,15 +11,19 @@ namespace FortniteLauncher
 {
     public class OnStartup
     {
-        public void Start()
+        public static void Start()
         {
             if (!Directory.Exists(AppPaths.DefaultDir))
             {
                 Directory.CreateDirectory(AppPaths.DefaultDir);
             }
-            else if (!Directory.Exists(AppPaths.LawinServerDefaultDir))
+            if (!Directory.Exists(AppPaths.LawinServerDefaultDir))
             {
                 Directory.CreateDirectory(AppPaths.LawinServerDefaultDir);
+            }
+            if (!Directory.Exists(AppPaths.LaunchersDir))
+            {
+                Directory.CreateDirectory(AppPaths.LaunchersDir);
             }
 
         }
