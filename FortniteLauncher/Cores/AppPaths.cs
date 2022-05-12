@@ -11,14 +11,16 @@ namespace FortniteLauncher.Cores
         public static string Launcher_one_to_five = "LauncherData/Launchers/1-5Launch.bat";
 
         //fortnite paths
+        /*
         MainWindow mainWindow = new MainWindow();
-        public static string DefaultLauncherFNPath = "/FortniteGame/Binaries/Win64/Launcher.bat";
-        public static string LauncherFNPath { get; set; }
+        public static string DefaultFNPath = "/FortniteGame/Binaries/Win64/FortniteLauncher.exe";
+        public static string LaunchFNPath { get; set; }
         public static void GetPath()
         {
             MainWindow mainWindow = new MainWindow();
             string userpath = mainWindow.path;
-            LauncherFNPath = userpath + DefaultLauncherFNPath;
+            LaunchFNPath = userpath + DefaultFNPath;
         }
+        */
     }
 }

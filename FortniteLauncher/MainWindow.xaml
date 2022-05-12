@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Title="FortniteLauncher" Height="304" Width="433" ResizeMode="CanMinimize"
     xmlns:ui="http://schemas.modernwpf.com/2019"
+        Closing="Window_Closing"
         ui:WindowHelper.UseModernWindowStyle="True">
     <ui:SimpleStackPanel>
         <TabControl>

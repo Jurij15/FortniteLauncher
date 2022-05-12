@@ -18,6 +18,7 @@ using Microsoft.Windows;
 using System.Drawing;
 using FortniteLauncher.Cores.FortniteLaunch;
 using FortniteLauncher.Cores;
+using System.Diagnostics;
 
 namespace FortniteLauncher
 {
@@ -26,11 +27,14 @@ namespace FortniteLauncher
     /// </summary>
     public partial class MainWindow : Window
     {
+        ///FortniteGame/Binaries/Win64/FortniteLauncher.exe
+        public string DefaultFNPath = "/FortniteGame/Binaries/Win64/FortniteClient-Win64-Shipping.exe";
+        public static string LaunchFNPath { get; set; }
         public string path { get; set; }
         public MainWindow()
         {
             InitializeComponent();
-            OnStartup.Start();
+            //OnStartup.Start();
         }
 
         private void ExploreBtn_Click(object sender, RoutedEventArgs e)
@@ -55,11 +59,28 @@ namespace FortniteLauncher
 
         private void LaunchBtn_Click(object sender, RoutedEventArgs e)
         {
+            /*
             Launch1_5 launch1_5 = new Launch1_5();
             if (Client_onetofilve.IsChecked == true)
             {
                 launch1_5.launchFN();
             }
+            */
+            Launch launch = new Launch();
+            //launch.BeforeStart();
+            MainWindow mainWindow = new MainWindow();
+            Process FNprocess = new Process();
+            string pathfromuser = PathBOx.Text;
+            string fullpath = pathfromuser + DefaultFNPath;
+            FNprocess.StartInfo.Arguments = "-epicapp=Fortnite -epicenv=Prod -epicportal -epiclocale=en-us -skippatchcheck -NOSSLPINNING -FORCECONSOLE";
+            FNprocess.StartInfo.FileName = fullpath;
+            System.Windows.MessageBox.Show(fullpath);
+            FNprocess.Start();
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            Environment.Exit(0);
         }
     }
 }

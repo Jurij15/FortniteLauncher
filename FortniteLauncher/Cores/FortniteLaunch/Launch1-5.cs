@@ -10,6 +10,7 @@ namespace FortniteLauncher.Cores.FortniteLaunch
 {
     public class Launch1_5
     {
+        /*
         public void CheckLaunchFIle()
         {
             AppPaths.GetPath();
@@ -23,5 +24,6 @@ namespace FortniteLauncher.Cores.FortniteLaunch
             CheckLaunchFIle();
             Process.Start(AppPaths.LauncherFNPath);
         }
+        */
     }
 }
