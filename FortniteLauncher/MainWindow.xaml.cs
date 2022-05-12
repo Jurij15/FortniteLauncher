@@ -16,8 +16,6 @@ using System.Windows.Forms;
 using Microsoft.Win32;
 using Microsoft.Windows;
 using System.Drawing;
-using FortniteLauncher.Cores.FortniteLaunch;
-using FortniteLauncher.Cores;
 using System.Diagnostics;
 
 namespace FortniteLauncher
@@ -29,7 +27,6 @@ namespace FortniteLauncher
     {
         ///FortniteGame/Binaries/Win64/FortniteLauncher.exe
         public string DefaultFNPath = "/FortniteGame/Binaries/Win64/FortniteClient-Win64-Shipping.exe";
-        public static string LaunchFNPath { get; set; }
         public string path { get; set; }
         public MainWindow()
         {
@@ -59,15 +56,6 @@ namespace FortniteLauncher
 
         private void LaunchBtn_Click(object sender, RoutedEventArgs e)
         {
-            /*
-            Launch1_5 launch1_5 = new Launch1_5();
-            if (Client_onetofilve.IsChecked == true)
-            {
-                launch1_5.launchFN();
-            }
-            */
-            Launch launch = new Launch();
-            //launch.BeforeStart();
             MainWindow mainWindow = new MainWindow();
             Process FNprocess = new Process();
             string pathfromuser = PathBOx.Text;

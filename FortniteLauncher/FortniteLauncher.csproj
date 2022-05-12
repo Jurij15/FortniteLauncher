@@ -17,11 +17,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Cores\Server\ServerUpdate\" />
+    <Resource Include="lawinserverImage.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="lawinserverImage.png" />
+    <Folder Include="Server\" />
   </ItemGroup>
 
 </Project>
