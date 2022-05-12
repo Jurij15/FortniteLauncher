@@ -20,8 +20,4 @@
     <Resource Include="lawinserverImage.png" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Server\" />
-  </ItemGroup>
-
 </Project>

@@ -33,8 +33,9 @@
                 <ui:TabItemHelper.Icon>
                     <ui:SymbolIcon Symbol="Sync" />
                 </ui:TabItemHelper.Icon>
-                <Grid Height="248"> 
-                    
+                <Grid Height="248">
+                    <Image Source="/lawinserverImage.png" Margin="0,0,0,183"/>
+                    <Button x:Name="DisBtn" Content="Discord" Click="DisBtn_Click" Margin="0,68,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Width="413"/>
                 </Grid>
             </TabItem>
             <TabItem Header="About">

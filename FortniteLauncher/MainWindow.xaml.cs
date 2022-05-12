@@ -31,7 +31,7 @@ namespace FortniteLauncher
         public MainWindow()
         {
             InitializeComponent();
-            //OnStartup.Start();
+            OnStartup.Start();
         }
 
         private void ExploreBtn_Click(object sender, RoutedEventArgs e)
@@ -69,6 +69,11 @@ namespace FortniteLauncher
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             Environment.Exit(0);
+        }
+
+        private void DisBtn_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

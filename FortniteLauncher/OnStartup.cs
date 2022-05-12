@@ -21,11 +21,6 @@ namespace FortniteLauncher
             {
                 Directory.CreateDirectory(AppPaths.LawinServerDefaultDir);
             }
-            if (!Directory.Exists(AppPaths.LaunchersDir))
-            {
-                Directory.CreateDirectory(AppPaths.LaunchersDir);
-            }
-
         }
     }
 }
