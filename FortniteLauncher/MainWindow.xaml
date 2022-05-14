@@ -10,23 +10,18 @@
         Closing="Window_Closing"
         ui:WindowHelper.UseModernWindowStyle="True">
     <ui:SimpleStackPanel>
-        <TabControl>
+        <TabControl SelectionChanged="TabControl_SelectionChanged">
             <TabItem Header="Game">
                 <ui:TabItemHelper.Icon>
                     <ui:SymbolIcon Symbol="Play" />
                 </ui:TabItemHelper.Icon>
                 <Grid Height="248">
                     <Label HorizontalAlignment="Right" Margin="0,21,335,205" Width="88">Fortnite path:</Label>
-                    <Label HorizontalAlignment="Right" Margin="0,80,327,148" Width="94">Client 1-5</Label>
-                    <Label HorizontalAlignment="Left" Margin="12,112,0,113" Width="94">Client 6-9.10</Label>
-                    <Label HorizontalAlignment="Left" Margin="12,146,0,78" Width="106">Client 9.40-10.40</Label>
-                    <TextBox Margin="103,10,10,205" FontSize="14" x:Name="PathBOx"/>
+                    <TextBox TextChanged="PathBOx_TextChanged" Margin="103,10,10,205" FontSize="14" x:Name="PathBOx"/>
                     <Button x:Name="LaunchBtn" Click="LaunchBtn_Click" Content="LAUNCH!" Margin="0,177,0,0" VerticalAlignment="Top" Height="45" Width="411" HorizontalAlignment="Center"/>
-                    <CheckBox x:Name="Client_onetofilve" Content="" Margin="120,74,0,0" VerticalAlignment="Top" Width="20"/>
-                    <CheckBox x:Name="Client_sixtonineten" Content="" Margin="120,138,0,0" VerticalAlignment="Top" Width="37"/>
-                    <CheckBox x:Name="Client_nintefortytotenforty" Content="" Margin="120,106,0,0" VerticalAlignment="Top" Width="37"/>
                     <Button x:Name="ExploreBtn" Click="ExploreBtn_Click" Content="Explore" Margin="302,48,0,0" VerticalAlignment="Top" Width="120"/>
-                    <Image x:Name="SeasonImage" Height="121" Margin="162,48,140,0" VerticalAlignment="Top" Width="131"/>
+                    <Image x:Name="SeasonImage" Height="121" Margin="14,48,288,0" VerticalAlignment="Top" Width="131"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="200,0,0,0" TextWrapping="Wrap" Text="The directory must contain the FortniteGame and Engine folders!" VerticalAlignment="Center" Width="222" Height="40"/>
                 </Grid>
             </TabItem>
             <TabItem Header="LawinServer">
@@ -36,6 +31,9 @@
                 <Grid Height="248">
                     <Image Source="/lawinserverImage.png" Margin="0,0,0,183"/>
                     <Button x:Name="DisBtn" Content="Discord" Click="DisBtn_Click" Margin="0,68,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Width="413"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="10,0,0,0" TextWrapping="Wrap" Text="LawinServer FileSystem Status" VerticalAlignment="Center" Width="189"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="230,0,0,0" TextWrapping="Wrap" Text="Status" VerticalAlignment="Center" Width="144"/>
+                    <Ellipse x:Name="StatusIcon" HorizontalAlignment="Left" Height="18" Margin="202,0,0,0" Stroke="Gray" Fill="Gray" VerticalAlignment="Center" Width="23"/>
                 </Grid>
             </TabItem>
             <TabItem Header="About">

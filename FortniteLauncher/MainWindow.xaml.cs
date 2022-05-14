@@ -17,6 +17,7 @@ using Microsoft.Win32;
 using Microsoft.Windows;
 using System.Drawing;
 using System.Diagnostics;
+using FortniteLauncher.Cores;
 
 namespace FortniteLauncher
 {
@@ -28,10 +29,25 @@ namespace FortniteLauncher
         ///FortniteGame/Binaries/Win64/FortniteLauncher.exe
         public string DefaultFNPath = "/FortniteGame/Binaries/Win64/FortniteClient-Win64-Shipping.exe";
         public string path { get; set; }
+        public string serverON { get; set; }
+        public string ISfsOK { get; set; }
         public MainWindow()
         {
             InitializeComponent();
             OnStartup.Start();
+            /*
+            CheckFileSystem checkFileSystem = new CheckFileSystem();
+            checkFileSystem.CheckFS();
+
+            if (ISfsOK == "true")
+            {
+                StatusIcon.Fill = new SolidColorBrush(System.Windows.Media.Colors.LightGreen);
+            }
+            else if (ISfsOK == "false")
+            {
+                StatusIcon.Fill = new SolidColorBrush(System.Windows.Media.Colors.Red);
+            }
+            */
         }
 
         private void ExploreBtn_Click(object sender, RoutedEventArgs e)
@@ -52,6 +68,7 @@ namespace FortniteLauncher
             string newimage = path + "/FortniteGame/Content/Splash/Splash.png";
             //SeasonImage.Source = new BitmapImage(new Uri(imageath, UriKind.Relative));
             */
+
         }
 
         private void LaunchBtn_Click(object sender, RoutedEventArgs e)
@@ -74,6 +91,37 @@ namespace FortniteLauncher
         private void DisBtn_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void PathBOx_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (PathBOx.Text == "")
+            {
+                //nothing
+            }
+            else if (PathBOx.Text != "")
+            {
+                string bmppath = PathBOx.Text + "/FortniteGame/Content/Splash/Splash.bmp";
+                Bitmap bitmap = new Bitmap(bmppath);
+                //ImageSource imgsource = new BitmapImage(new Uri(bmppath));
+                SeasonImage.Source = new BitmapImage(new Uri(bmppath));
+
+            }
+        }
+
+        private void TabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            CheckFileSystem checkFileSystem = new CheckFileSystem();
+            checkFileSystem.CheckFS();
+
+            if (ISfsOK == "true")
+            {
+                StatusIcon.Fill = new SolidColorBrush(System.Windows.Media.Colors.LightGreen);
+            }
+            else if (ISfsOK == "false")
+            {
+                StatusIcon.Fill = new SolidColorBrush(System.Windows.Media.Colors.Red);
+            }
         }
     }
 }
