@@ -121,5 +121,11 @@ namespace FortniteLauncher
             ReinstallServer reinstallServer = new ReinstallServer();
             reinstallServer.Reinstall();
         }
+
+        private void DeleteServerBtn_Click(object sender, RoutedEventArgs e)
+        {
+            DeleteServer delser = new DeleteServer();
+            delser.DeleteSRV();
+        }
     }
 }

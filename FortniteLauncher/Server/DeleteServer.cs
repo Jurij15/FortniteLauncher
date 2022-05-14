@@ -18,7 +18,7 @@ namespace FortniteLauncher.Server
             }
             else if (Directory.Exists("LauncherData/LawinServer-main"))
             {
-                Directory.Delete("LauncherData/LawinServer-main");
+                Directory.Delete("LauncherData/LawinServer-main", true);
             }
         }
     }

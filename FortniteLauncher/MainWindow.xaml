@@ -9,6 +9,9 @@
     xmlns:ui="http://schemas.modernwpf.com/2019"
         Closing="Window_Closing"
         ui:WindowHelper.UseModernWindowStyle="True">
+    <Window.Resources>
+        <SolidColorBrush x:Key="BG" Color="Red"/>
+    </Window.Resources>
     <ui:SimpleStackPanel>
         <TabControl>
             <TabItem Header="Game">
@@ -46,6 +49,10 @@
                 <ui:TabItemHelper.Icon>
                     <ui:SymbolIcon Symbol="ContactInfo" />
                 </ui:TabItemHelper.Icon>
+                <Grid Height="248">
+                    <Button Background="{DynamicResource BG}" Content="Delete Server" x:Name="DeleteServerBtn" Click="DeleteServerBtn_Click" Margin="10,206,0,0" VerticalAlignment="Top"/>
+
+                </Grid>
             </TabItem>
         </TabControl>
     </ui:SimpleStackPanel>
