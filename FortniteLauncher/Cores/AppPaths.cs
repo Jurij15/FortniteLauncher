@@ -9,6 +9,7 @@ namespace FortniteLauncher.Cores
         public static string LawinServerDefaultDir = "LauncherData/";
         public static string LauncherTemp = "LauncherData/Temp";
         public static string PartiesXMPP = "LauncherData/PartiesXMPP.ini";
+        public static string Depencencies = "LauncherData/LawinServer-Main/install_packages.bat";
 
         //lawinserver git string
         public static string LawinGit = "https://github.com/Lawin0129/LawinServer/archive/refs/heads/main.zip";

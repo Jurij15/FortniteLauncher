@@ -13,7 +13,10 @@ namespace FortniteLauncher.Server
     {
         public void ZIP()
         {
-            ZipFile.ExtractToDirectory(AppPaths.LawinGit, AppPaths.LawinServerDefaultDir);
+            UpdateStatus.UpdateCurrentStatus("Extracting files...");
+            ZipFile.ExtractToDirectory(AppPaths.LauncherTemp, AppPaths.LawinServerDefaultDir);
+            InstallDependencies installDependencies = new InstallDependencies();
+            installDependencies.Packages();
         }
     }
 }

@@ -18,6 +18,7 @@ using Microsoft.Windows;
 using System.Drawing;
 using System.Diagnostics;
 using FortniteLauncher.Cores;
+using FortniteLauncher.Server;
 
 namespace FortniteLauncher
 {
@@ -107,6 +108,12 @@ namespace FortniteLauncher
                 SeasonImage.Source = new BitmapImage(new Uri(bmppath));
 
             }
+        }
+
+        private void InstallLawinBtn_Click(object sender, RoutedEventArgs e)
+        {
+            DownloadServer dloadserver = new DownloadServer();
+            dloadserver.DownloadGit();
         }
     }
 }
