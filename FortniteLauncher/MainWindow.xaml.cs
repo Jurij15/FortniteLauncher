@@ -115,5 +115,11 @@ namespace FortniteLauncher
             DownloadServer dloadserver = new DownloadServer();
             dloadserver.DownloadGit();
         }
+
+        private void ReinstallUpdateBtn_Click(object sender, RoutedEventArgs e)
+        {
+            ReinstallServer reinstallServer = new ReinstallServer();
+            reinstallServer.Reinstall();
+        }
     }
 }

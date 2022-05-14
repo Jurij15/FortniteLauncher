@@ -35,7 +35,7 @@
                     <TextBlock HorizontalAlignment="Left" Margin="153,0,0,0" TextWrapping="Wrap" Text="Status" VerticalAlignment="Center" Width="144"/>
                     <Ellipse x:Name="StatusIcon" HorizontalAlignment="Left" Height="18" Margin="125,0,0,0" Stroke="Gray" Fill="Gray" VerticalAlignment="Center" Width="23"/>
                     <Button x:Name="InstallLawinBtn" Click="InstallLawinBtn_Click" Content="Install" Margin="10,138,0,0" VerticalAlignment="Top" Width="206"/>
-                    <Button Content="Reinstall/Update" Margin="225,138,0,0" VerticalAlignment="Top" Width="198"/>
+                    <Button x:Name="ReinstallUpdateBtn" Click="ReinstallUpdateBtn_Click" Content="Reinstall/Update" Margin="225,138,0,0" VerticalAlignment="Top" Width="198"/>
                     <CheckBox Content="Use Parties XMPP" Margin="10,206,0,0" VerticalAlignment="Top"/>
                     <Button Content="Open FileSystem" Margin="10,174,0,0" VerticalAlignment="Top" Width="206"/>
                     <Button Content="Start!" Margin="225,174,0,0" VerticalAlignment="Top" Width="198"/>
