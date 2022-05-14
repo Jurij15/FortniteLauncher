@@ -27,7 +27,7 @@ namespace FortniteLauncher
     public partial class MainWindow : Window
     {
         ///FortniteGame/Binaries/Win64/FortniteLauncher.exe
-        public string DefaultFNPath = "/FortniteGame/Binaries/Win64/FortniteClient-Win64-Shipping.exe";
+        public string DefaultFNPath = "/FortniteGame/Binaries/Win64/FortniteLauncher.exe";
         public string path { get; set; }
         public string serverON { get; set; }
         public string ISfsOK { get; set; }
@@ -106,21 +106,6 @@ namespace FortniteLauncher
                 //ImageSource imgsource = new BitmapImage(new Uri(bmppath));
                 SeasonImage.Source = new BitmapImage(new Uri(bmppath));
 
-            }
-        }
-
-        private void TabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            CheckFileSystem checkFileSystem = new CheckFileSystem();
-            checkFileSystem.CheckFS();
-
-            if (ISfsOK == "true")
-            {
-                StatusIcon.Fill = new SolidColorBrush(System.Windows.Media.Colors.LightGreen);
-            }
-            else if (ISfsOK == "false")
-            {
-                StatusIcon.Fill = new SolidColorBrush(System.Windows.Media.Colors.Red);
             }
         }
     }

@@ -18,7 +18,7 @@
                 <Grid Height="248">
                     <Label HorizontalAlignment="Right" Margin="0,21,335,205" Width="88">Fortnite path:</Label>
                     <TextBox TextChanged="PathBOx_TextChanged" Margin="103,10,10,205" FontSize="14" x:Name="PathBOx"/>
-                    <Button x:Name="LaunchBtn" Click="LaunchBtn_Click" Content="LAUNCH!" Margin="0,177,0,0" VerticalAlignment="Top" Height="45" Width="411" HorizontalAlignment="Center"/>
+                    <Button x:Name="LaunchBtn" Content="LAUNCH! (might not work atm)s" Click="LaunchBtn_Click" Margin="0,177,0,0" VerticalAlignment="Top" Height="45" Width="411" HorizontalAlignment="Center"/>
                     <Button x:Name="ExploreBtn" Click="ExploreBtn_Click" Content="Explore" Margin="302,48,0,0" VerticalAlignment="Top" Width="120"/>
                     <Image x:Name="SeasonImage" Height="121" Margin="14,48,288,0" VerticalAlignment="Top" Width="131"/>
                     <TextBlock HorizontalAlignment="Left" Margin="200,0,0,0" TextWrapping="Wrap" Text="The directory must contain the FortniteGame and Engine folders!" VerticalAlignment="Center" Width="222" Height="40"/>
@@ -31,9 +31,13 @@
                 <Grid Height="248">
                     <Image Source="/lawinserverImage.png" Margin="0,0,0,183"/>
                     <Button x:Name="DisBtn" Content="Discord" Click="DisBtn_Click" Margin="0,68,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Width="413"/>
-                    <TextBlock HorizontalAlignment="Left" Margin="10,0,0,0" TextWrapping="Wrap" Text="LawinServer FileSystem Status" VerticalAlignment="Center" Width="189"/>
-                    <TextBlock HorizontalAlignment="Left" Margin="230,0,0,0" TextWrapping="Wrap" Text="Status" VerticalAlignment="Center" Width="144"/>
-                    <Ellipse x:Name="StatusIcon" HorizontalAlignment="Left" Height="18" Margin="202,0,0,0" Stroke="Gray" Fill="Gray" VerticalAlignment="Center" Width="23"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="10,0,0,0" TextWrapping="Wrap" Text="FileSystem Status" VerticalAlignment="Center" Width="110"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="153,0,0,0" TextWrapping="Wrap" Text="Status" VerticalAlignment="Center" Width="144"/>
+                    <Ellipse x:Name="StatusIcon" HorizontalAlignment="Left" Height="18" Margin="125,0,0,0" Stroke="Gray" Fill="Gray" VerticalAlignment="Center" Width="23"/>
+                    <Button Content="Install" Margin="10,138,0,0" VerticalAlignment="Top" Width="206"/>
+                    <Button Content="Reinstall/Update" Margin="225,138,0,0" VerticalAlignment="Top" Width="198"/>
+                    <CheckBox Content="Use Parties XMPP" Margin="10,206,0,0" VerticalAlignment="Top"/>
+                    <Button Content="Open FileSystem" Margin="10,174,0,0" VerticalAlignment="Top" Width="206"/>
                 </Grid>
             </TabItem>
             <TabItem Header="About">
