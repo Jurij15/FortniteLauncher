@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:FortniteLauncher"
         mc:Ignorable="d"
         Title="FortniteLauncher" Height="304" Width="433" ResizeMode="CanMinimize"
-    xmlns:ui="http://schemas.modernwpf.com/2019"
+        xmlns:ui="http://schemas.modernwpf.com/2019"
         Closing="Window_Closing"
         ui:WindowHelper.UseModernWindowStyle="True">
     <Window.Resources>
@@ -50,7 +50,8 @@
                 </ui:TabItemHelper.Icon>
                 <Grid Height="248">
                     <Button Background="{DynamicResource BG}" Content="Delete Server" x:Name="DeleteServerBtn" Click="DeleteServerBtn_Click" Margin="10,206,0,0" VerticalAlignment="Top"/>
-                    <Button Content="Open FileSystem" Margin="115,206,0,0" VerticalAlignment="Top" Width="206"/>
+                    <Button Content="Open FileSystem" Margin="115,206,0,0" VerticalAlignment="Top" Width="153"/>
+                    <Button Content="Fix not starting" x:Name="FixBtn" Click="FixBtn_Click" Margin="273,206,0,0" VerticalAlignment="Top" Width="150"/>
                 </Grid>
             </TabItem>
         </TabControl>

@@ -133,5 +133,11 @@ namespace FortniteLauncher
             Start start = new Start();
             start.StartServer();
         }
+
+        private void FixBtn_Click(object sender, RoutedEventArgs e)
+        {
+            ServerNotStartingFIx serverNotStartingFIx = new ServerNotStartingFIx();
+            serverNotStartingFIx.FIX();
+        }
     }
 }

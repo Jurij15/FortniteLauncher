@@ -3,22 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.IO;
 using System.Diagnostics;
 
 namespace FortniteLauncher.Server
 {
-    public class Start
+    public class ServerNotStartingFIx
     {
-        public void StartServer()
+        public void FIX()
         {
-            //Process.Start("LauncherData/LawinServer-main/start.bat");
             Process p = new Process();
             p.StartInfo.FileName = "cmd.exe";
             p.StartInfo.Verb = "runas";
-            p.StartInfo.Arguments = "/C cd LauncherData/LawinServer-main && start.bat";
+            p.StartInfo.Arguments = "/C net stop http && y";
             p.Start();
-            
         }
     }
 }
