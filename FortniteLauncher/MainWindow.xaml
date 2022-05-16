@@ -40,8 +40,7 @@
                     <Button x:Name="InstallLawinBtn" Click="InstallLawinBtn_Click" Content="Install" Margin="10,138,0,0" VerticalAlignment="Top" Width="206"/>
                     <Button x:Name="ReinstallUpdateBtn" Click="ReinstallUpdateBtn_Click" Content="Reinstall/Update" Margin="225,138,0,0" VerticalAlignment="Top" Width="198"/>
                     <CheckBox Content="Use Parties XMPP" Margin="10,206,0,0" VerticalAlignment="Top"/>
-                    <Button Content="Open FileSystem" Margin="10,174,0,0" VerticalAlignment="Top" Width="206"/>
-                    <Button Content="Start!" Margin="225,174,0,0" VerticalAlignment="Top" Width="198"/>
+                    <Button Content="Start!" Margin="225,174,0,0" VerticalAlignment="Top" Width="198" x:Name="StartBtn" Click="StartBtn_Click" />
                     <TextBlock x:Name="CurrentStatus" HorizontalAlignment="Left" Margin="225,0,0,0" TextWrapping="Wrap" Text="CurrentStatus" VerticalAlignment="Center" Width="198"/>
                 </Grid>
             </TabItem>
@@ -51,7 +50,7 @@
                 </ui:TabItemHelper.Icon>
                 <Grid Height="248">
                     <Button Background="{DynamicResource BG}" Content="Delete Server" x:Name="DeleteServerBtn" Click="DeleteServerBtn_Click" Margin="10,206,0,0" VerticalAlignment="Top"/>
-
+                    <Button Content="Open FileSystem" Margin="115,206,0,0" VerticalAlignment="Top" Width="206"/>
                 </Grid>
             </TabItem>
         </TabControl>

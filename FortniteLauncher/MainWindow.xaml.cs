@@ -127,5 +127,11 @@ namespace FortniteLauncher
             DeleteServer delser = new DeleteServer();
             delser.DeleteSRV();
         }
+
+        private void StartBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Start start = new Start();
+            start.StartServer();
+        }
     }
 }
