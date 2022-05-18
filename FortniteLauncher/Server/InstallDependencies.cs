@@ -19,7 +19,7 @@ namespace FortniteLauncher.Server
             Process p = new Process();
             p.StartInfo.FileName = "cmd.exe";
             p.StartInfo.Verb = "runas";
-            p.StartInfo.Arguments = "/C cd LauncherData/LawinServer-main && install_packages.bat";
+            p.StartInfo.Arguments = "/C cd LauncherData/LawinServer/LawinServer-main && install_packages.bat";
             p.Start();
             UpdateStatus.UpdateCurrentStatus("Ready to start!");
         }

@@ -112,8 +112,8 @@ namespace FortniteLauncher
 
         private void InstallLawinBtn_Click(object sender, RoutedEventArgs e)
         {
-            DownloadServer dloadserver = new DownloadServer();
-            dloadserver.DownloadGit();
+            InstallServer install = new InstallServer();
+            install.Install();
         }
 
         private void ReinstallUpdateBtn_Click(object sender, RoutedEventArgs e)

@@ -12,13 +12,13 @@ namespace FortniteLauncher.Server
     {
         public void DeleteSRV()
         {
-            if (!Directory.Exists("LauncherData/LawinServer-main"))
+            if (!Directory.Exists("LauncherData/LawinServer/LawinServer-main"))
             {
                 MessageBox.Show("LawinServer is not installed! Try clicking Install button");
             }
-            else if (Directory.Exists("LauncherData/LawinServer-main"))
+            else if (Directory.Exists("LauncherData/LawinServer/LawinServer-main"))
             {
-                Directory.Delete("LauncherData/LawinServer-main", true);
+                Directory.Delete("LauncherData/LawinServer/LawinServer-main", true);
             }
         }
     }
