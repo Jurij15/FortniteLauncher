@@ -49,6 +49,7 @@ namespace FortniteLauncher
                 StatusIcon.Fill = new SolidColorBrush(System.Windows.Media.Colors.Red);
             }
             */
+            VersionBox.Text = Version.VersionFull;
         }
 
         private void ExploreBtn_Click(object sender, RoutedEventArgs e)
