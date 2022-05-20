@@ -15,10 +15,10 @@ Launcher is still being worked on and bugs are expcted!
 - Download source or clone
 - Compile with .NET 6
 
-#Troubleshooting
-##Launcher issues
+# Troubleshooting
+## Launcher issues
 - Make sure you installed .NET 6.0 from above link
 - TBD
 
-##LawinServer issues
+#0# LawinServer issues
 - Join Lawin's discord and look in channel #faq-and-troubleshooting
