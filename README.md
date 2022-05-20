@@ -20,5 +20,5 @@ Launcher is still being worked on and bugs are expcted!
 - Make sure you installed .NET 6.0 from above link
 - TBD
 
-#0# LawinServer issues
+## LawinServer issues
 - Join Lawin's discord and look in channel #faq-and-troubleshooting
