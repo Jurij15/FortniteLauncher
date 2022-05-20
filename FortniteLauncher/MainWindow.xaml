@@ -34,14 +34,11 @@
                 <Grid Height="248">
                     <Image Source="/lawinserverImage.png" Margin="0,0,0,183"/>
                     <Button x:Name="DisBtn" Content="Discord" Click="DisBtn_Click" Margin="0,68,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Width="413"/>
-                    <TextBlock HorizontalAlignment="Left" Margin="10,0,0,0" TextWrapping="Wrap" Text="FileSystem Status" VerticalAlignment="Center" Width="110"/>
-                    <TextBlock HorizontalAlignment="Left" Margin="153,0,0,0" TextWrapping="Wrap" Text="Status" VerticalAlignment="Center" Width="144"/>
-                    <Ellipse x:Name="StatusIcon" HorizontalAlignment="Left" Height="18" Margin="125,0,0,0" Stroke="Gray" Fill="Gray" VerticalAlignment="Center" Width="23"/>
-                    <Button x:Name="InstallLawinBtn" Click="InstallLawinBtn_Click" Content="Install" Margin="10,138,0,0" VerticalAlignment="Top" Width="206"/>
-                    <Button x:Name="ReinstallUpdateBtn" Click="ReinstallUpdateBtn_Click" Content="Reinstall/Update" Margin="225,138,0,0" VerticalAlignment="Top" Width="198"/>
-                    <CheckBox Content="Use Parties XMPP" Margin="10,206,0,0" VerticalAlignment="Top"/>
-                    <Button Content="Start!" Margin="225,174,0,0" VerticalAlignment="Top" Width="198" x:Name="StartBtn" Click="StartBtn_Click" />
-                    <TextBlock x:Name="CurrentStatus" HorizontalAlignment="Left" Margin="225,0,0,0" TextWrapping="Wrap" Text="CurrentStatus" VerticalAlignment="Center" Width="198"/>
+                    <Button x:Name="InstallLawinBtn" Click="InstallLawinBtn_Click" Content="Install" Margin="10,124,0,0" VerticalAlignment="Top" Width="206"/>
+                    <Button x:Name="ReinstallUpdateBtn" Click="ReinstallUpdateBtn_Click" Content="Reinstall/Update" Margin="225,124,0,0" VerticalAlignment="Top" Width="198"/>
+                    <CheckBox x:Name="PartiesCheckBox" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked" Content="Use Parties XMPP" Margin="10,199,0,0" VerticalAlignment="Top"/>
+                    <Button Content="Start!" Margin="225,161,0,0" VerticalAlignment="Top" Width="198" x:Name="StartBtn" Click="StartBtn_Click" />
+                    <TextBlock x:Name="CurrentStatus" HorizontalAlignment="Left" Margin="225,105,0,0" TextWrapping="Wrap" Text="CurrentStatus" VerticalAlignment="Top" Width="198"/>
                 </Grid>
             </TabItem>
             <TabItem Header="About">

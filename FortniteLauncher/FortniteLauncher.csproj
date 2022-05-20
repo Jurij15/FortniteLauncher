@@ -28,4 +28,9 @@
     <Resource Include="lawinserverImage.png" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Launcher\LauncherData\" />
+    <Folder Include="Proxy\" />
+  </ItemGroup>
+
 </Project>

@@ -58,19 +58,6 @@ namespace FortniteLauncher
             folderBrowserDialog.ShowDialog();
             path = folderBrowserDialog.SelectedPath;
             PathBOx.Text = folderBrowserDialog.SelectedPath;
-            //i give up on this
-            /*
-            string imageath = path + "/FortniteGame/Content/Splash/Splash.bmp";
-            System.Windows.MessageBox.Show(imageath);
-            Bitmap bmp = new Bitmap(imageath);
-            //convert the .bmp image to .png and display it normally
-            System.Drawing.Image image1 = System.Drawing.Image.FromFile(imageath);
-            image1.Save(imageath, System.Drawing.Imaging.ImageFormat.Png);
-            //display the image
-            string newimage = path + "/FortniteGame/Content/Splash/Splash.png";
-            //SeasonImage.Source = new BitmapImage(new Uri(imageath, UriKind.Relative));
-            */
-
         }
 
         private void LaunchBtn_Click(object sender, RoutedEventArgs e)
@@ -87,6 +74,15 @@ namespace FortniteLauncher
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
+            if (PartiesCheckBox.IsChecked == true)
+            {
+                PartiesXMPP p = new PartiesXMPP();
+                p.DisableParties();
+            }
+            else if (PartiesCheckBox.IsChecked == false)
+            {
+                //nothing, countiniue
+            }
             Environment.Exit(0);
         }
 
@@ -139,6 +135,18 @@ namespace FortniteLauncher
         {
             ServerNotStartingFIx serverNotStartingFIx = new ServerNotStartingFIx();
             serverNotStartingFIx.FIX();
+        }
+
+        private void CheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+            PartiesXMPP partiesXMPP = new PartiesXMPP();
+            partiesXMPP.EnableParties();
+        }
+
+        private void CheckBox_Unchecked(object sender, RoutedEventArgs e)
+        {
+            PartiesXMPP partiesXMPP = new PartiesXMPP();
+            partiesXMPP.DisableParties();
         }
     }
 }
