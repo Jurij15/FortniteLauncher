@@ -38,7 +38,7 @@
                     <Button x:Name="ReinstallUpdateBtn" Click="ReinstallUpdateBtn_Click" Content="Reinstall/Update" Margin="225,124,0,0" VerticalAlignment="Top" Width="198"/>
                     <CheckBox x:Name="PartiesCheckBox" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked" Content="Use Parties XMPP" Margin="10,199,0,0" VerticalAlignment="Top"/>
                     <Button Content="Start!" Margin="225,161,0,0" VerticalAlignment="Top" Width="198" x:Name="StartBtn" Click="StartBtn_Click" />
-                    <TextBlock x:Name="CurrentStatus" HorizontalAlignment="Left" Margin="225,105,0,0" TextWrapping="Wrap" Text="CurrentStatus" VerticalAlignment="Top" Width="198"/>
+                    <TextBlock x:Name="CurrentStatus" HorizontalAlignment="Left" Margin="225,105,0,0" TextWrapping="Wrap" Text="  " VerticalAlignment="Top" Width="198"/>
                 </Grid>
             </TabItem>
             <TabItem Header="About">
