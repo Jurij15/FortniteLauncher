@@ -21,4 +21,4 @@ Launcher is still being worked on and bugs are expcted!
 - TBD
 
 ## LawinServer issues
-- Join Lawin's discord and look in channel #faq-and-troubleshooting
+- Join [Lawin's Discord](https://discord.gg/AtXKh4rZCt) and look in channel #faq-and-troubleshooting
