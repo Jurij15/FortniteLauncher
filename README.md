@@ -8,7 +8,6 @@ A simple launcher for LawinServer, made in C# with ModernWPF
 ## Installing
 - Download the latest one in Releases and extract it
 - Video :
--- tbd
 
 ## Compiling
 - Download source or clone
