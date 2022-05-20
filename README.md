@@ -11,3 +11,11 @@ A simple launcher for LawinServer, made in C# with ModernWPF
 ## Compiling
 - Download source or clone
 - Compile with .NET 6
+
+#Troubleshooting
+##Launcher issues
+- Make sure you installed .NET 6.0 from above link
+- TBD
+
+##LawinServer issues
+- Join Lawin's discord and look in channel #faq-and-troubleshooting
