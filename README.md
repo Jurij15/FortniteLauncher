@@ -1,5 +1,5 @@
 # FortniteLauncher
-A simple launcher for LawinServer
+A simple launcher for LawinServer, made in C# with ModernWPF
 
 # How to use
 ## Prerequisites
