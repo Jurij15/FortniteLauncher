@@ -1,6 +1,8 @@
 # FortniteLauncher
 A simple launcher for LawinServer, made in C# with ModernWPF
 
+Launcher is still being worked on and bugs are expcted!
+
 # How to use
 ## Prerequisites
 - Install [NodeJS](https://nodejs.org/en/download/)
