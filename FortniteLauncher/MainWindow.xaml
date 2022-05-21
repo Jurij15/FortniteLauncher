@@ -36,7 +36,7 @@
                     <Button x:Name="DisBtn" Content="Discord" Click="DisBtn_Click" Margin="0,68,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Width="413"/>
                     <Button x:Name="InstallLawinBtn" Click="InstallLawinBtn_Click" Content="Install" Margin="10,124,0,0" VerticalAlignment="Top" Width="206"/>
                     <Button x:Name="ReinstallUpdateBtn" Click="ReinstallUpdateBtn_Click" Content="Reinstall/Update" Margin="225,124,0,0" VerticalAlignment="Top" Width="198"/>
-                    <CheckBox x:Name="PartiesCheckBox" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked" Content="Use Parties XMPP" Margin="10,199,0,0" VerticalAlignment="Top"/>
+                    <CheckBox x:Name="PartiesCheckBox" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked" Content="Use Parties XMPP" Margin="10,161,0,0" VerticalAlignment="Top"/>
                     <Button Content="Start!" Margin="225,161,0,0" VerticalAlignment="Top" Width="198" x:Name="StartBtn" Click="StartBtn_Click" />
                     <TextBlock x:Name="CurrentStatus" HorizontalAlignment="Left" Margin="225,105,0,0" TextWrapping="Wrap" Text="  " VerticalAlignment="Top" Width="198"/>
                 </Grid>
