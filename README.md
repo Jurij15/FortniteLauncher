@@ -18,7 +18,14 @@ Launcher is still being worked on and bugs are expcted!
 # Troubleshooting
 ## Launcher issues
 - Make sure you installed .NET 6.0 from above link
-- TBD
+###Common issues
+#### Launcher or proxy is not starting or closes after started
+- Make sure you installed .NET 6.0 from above link
+
 
 ## LawinServer issues
 - Join [Lawin's Discord](https://discord.gg/AtXKh4rZCt) and look in channel #faq-and-troubleshooting
+### Common issues:
+#### My internet is not working after using LawinServer
+-Disable proxy in Windows settings
+-Video in Lawin's discord
