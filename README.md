@@ -65,3 +65,6 @@ class Handlers
 #### My internet is not working after using LawinServer
 -Disable proxy in Windows settings
 -Video in Lawin's discord
+### Fortnite is showing `Unable to login to Fortnite servers`
+- Restart the launcher
+- Use Fiddler instead of the built-in proxy
