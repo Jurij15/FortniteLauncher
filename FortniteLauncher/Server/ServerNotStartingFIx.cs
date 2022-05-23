@@ -14,7 +14,7 @@ namespace FortniteLauncher.Server
             Process p = new Process();
             p.StartInfo.FileName = "cmd.exe";
             p.StartInfo.Verb = "runas";
-            p.StartInfo.Arguments = "/C net stop http && y";
+            p.StartInfo.Arguments = "/C net stop http";
             p.Start();
         }
     }

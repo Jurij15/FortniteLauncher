@@ -30,7 +30,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Launcher\LauncherData\" />
+    <Folder Include="Launcher\LauncherData\Proxy\" />
     <Folder Include="Proxy\" />
   </ItemGroup>
 

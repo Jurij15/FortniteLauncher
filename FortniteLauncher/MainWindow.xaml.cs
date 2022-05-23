@@ -36,19 +36,6 @@ namespace FortniteLauncher
         {
             InitializeComponent();
             OnStartup.Start();
-            /*
-            CheckFileSystem checkFileSystem = new CheckFileSystem();
-            checkFileSystem.CheckFS();
-
-            if (ISfsOK == "true")
-            {
-                StatusIcon.Fill = new SolidColorBrush(System.Windows.Media.Colors.LightGreen);
-            }
-            else if (ISfsOK == "false")
-            {
-                StatusIcon.Fill = new SolidColorBrush(System.Windows.Media.Colors.Red);
-            }
-            */
             VersionBox.Text = Version.VersionFull;
         }
 
@@ -127,8 +114,17 @@ namespace FortniteLauncher
 
         private void StartBtn_Click(object sender, RoutedEventArgs e)
         {
-            Start start = new Start();
-            start.StartServer();
+            if (IncludedProxyUSE.IsChecked == true)
+            {
+                Process.Start(AppPaths.IncludedProxy);
+                Start start = new Start();
+                start.StartServer();
+            }
+            else if (IncludedProxyUSE.IsChecked == false)
+            {
+                Start start = new Start();
+                start.StartServer();
+            }
         }
 
         private void FixBtn_Click(object sender, RoutedEventArgs e)
@@ -147,6 +143,11 @@ namespace FortniteLauncher
         {
             PartiesXMPP partiesXMPP = new PartiesXMPP();
             partiesXMPP.DisableParties();
+        }
+
+        private void IncludedProxyUSE_Checked(object sender, RoutedEventArgs e)
+        {
+            System.Windows.MessageBox.Show("WARNING! Using this Proxy may cause instability and Fortnite disconnecting from server! Rather use Fiddler!");
         }
     }
 }
