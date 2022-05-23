@@ -1,0 +1,12 @@
+﻿<Window x:Class="FortniteLauncher.TestingWelcome"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FortniteLauncher"
+        mc:Ignorable="d"
+        Title="TestingWelcome" Height="70" Width="698"
+        xmlns:ui="http://schemas.modernwpf.com/2019" ResizeMode="NoResize"
+        ui:WindowHelper.UseModernWindowStyle="True">
+    <Label Content="This is a preview beta build of FortniteLauncher! You might experience crashes, errors and unexplained glitches!"/>
+</Window>

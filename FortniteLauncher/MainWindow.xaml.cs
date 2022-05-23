@@ -37,6 +37,11 @@ namespace FortniteLauncher
             InitializeComponent();
             OnStartup.Start();
             VersionBox.Text = Version.VersionFull;
+            if (Version.VersionFull.Contains("Preview"))
+            {
+                TestingWelcome t = new TestingWelcome();
+                t.ShowDialog();
+            }
         }
 
         private void ExploreBtn_Click(object sender, RoutedEventArgs e)
@@ -75,7 +80,21 @@ namespace FortniteLauncher
 
         private void DisBtn_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                //from https://iqcode.com/code/csharp/c-open-web-page-in-default-browser
 
+                var uri = "https://discord.gg/AtXKh4rZCt";
+                var psi = new System.Diagnostics.ProcessStartInfo();
+                psi.UseShellExecute = true;
+                psi.FileName = uri;
+                System.Diagnostics.Process.Start(psi);
+                //Process.Start("https://discord.gg/AtXKh4rZCt");
+            }
+            catch (Exception ex)
+            {
+                System.Windows.MessageBox.Show(ex.Message);
+            }
         }
 
         private void PathBOx_TextChanged(object sender, TextChangedEventArgs e)
@@ -148,6 +167,12 @@ namespace FortniteLauncher
         private void IncludedProxyUSE_Checked(object sender, RoutedEventArgs e)
         {
             System.Windows.MessageBox.Show("WARNING! Using this Proxy may cause instability and Fortnite disconnecting from server! Rather use Fiddler!");
+        }
+
+        private void OpenFS_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFSys open = new OpenFSys();
+            open.OpenFSystem();
         }
     }
 }

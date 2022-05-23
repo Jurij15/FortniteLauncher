@@ -48,9 +48,10 @@
                 </ui:TabItemHelper.Icon>
                 <Grid Height="248">
                     <Button Background="{DynamicResource BG}" Content="Delete Server" x:Name="DeleteServerBtn" Click="DeleteServerBtn_Click" Margin="25,174,0,0" VerticalAlignment="Top"/>
-                    <Button Content="Open FileSystem" Margin="130,174,0,0" VerticalAlignment="Top" Width="136"/>
+                    <Button x:Name="OpenFS" Click="OpenFS_Click" Content="Open FileSystem" Margin="130,174,0,0" VerticalAlignment="Top" Width="136"/>
                     <Button Content="Fix not starting" x:Name="FixBtn" Click="FixBtn_Click" Margin="271,174,0,0" VerticalAlignment="Top" Width="131"/>
                     <TextBlock Text="VersionHere" x:Name="VersionBox" Margin="126,211,163,15" FontWeight="Bold"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="25,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="159" Width="377"><Run Text="Lawin - Server "/><Run Language="sl-si" Text="(link)"/><LineBreak/><Run Text="PsychoPast - Proxy"/><Run Language="sl-si" Text=" (link)"/></TextBlock>
                 </Grid>
             </TabItem>
         </TabControl>

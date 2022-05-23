@@ -22,6 +22,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Page Remove="Cores\PreviewWelcome.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="ModernWpfUI" Version="0.9.4" />
   </ItemGroup>
 
@@ -32,6 +36,7 @@
   <ItemGroup>
     <Folder Include="Launcher\LauncherData\Proxy\" />
     <Folder Include="Proxy\" />
+    <Folder Include="Versions\1.0.0.0-Beta\" />
   </ItemGroup>
 
 </Project>
