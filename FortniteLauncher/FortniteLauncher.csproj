@@ -18,6 +18,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Proxy\**" />
+    <EmbeddedResource Remove="Proxy\**" />
+    <None Remove="Proxy\**" />
+    <Page Remove="Proxy\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="lawinserverImage.png" />
   </ItemGroup>
 
@@ -35,7 +42,6 @@
 
   <ItemGroup>
     <Folder Include="Launcher\LauncherData\Proxy\" />
-    <Folder Include="Proxy\" />
     <Folder Include="Versions\1.0.0.0-Beta\" />
   </ItemGroup>
 
