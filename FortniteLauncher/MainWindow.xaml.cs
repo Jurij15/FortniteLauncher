@@ -195,5 +195,10 @@ namespace FortniteLauncher
             OpenFSys open = new OpenFSys();
             open.OpenFSystem();
         }
+
+        private void Lawinserver_github_link_RequestNavigate(object sender, RequestNavigateEventArgs e)
+        {
+            System.Diagnostics.Process.Start(e.Uri.ToString());
+        }
     }
 }

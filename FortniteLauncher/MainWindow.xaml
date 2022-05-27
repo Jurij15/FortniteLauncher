@@ -51,7 +51,7 @@
                     <Button x:Name="OpenFS" Click="OpenFS_Click" Content="Open FileSystem" Margin="130,174,0,0" VerticalAlignment="Top" Width="136"/>
                     <Button Content="Fix not starting" x:Name="FixBtn" Click="FixBtn_Click" Margin="271,174,0,0" VerticalAlignment="Top" Width="131"/>
                     <TextBlock Text="VersionHere" x:Name="VersionBox" Margin="126,211,163,15" FontWeight="Bold"/>
-                    <TextBlock HorizontalAlignment="Left" Margin="25,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="159" Width="377"><Run Text="Lawin - Server "/><Run Text="(link)"/><LineBreak/><Run Text="PsychoPast - Proxy"/><Run Text=" (link)"/><LineBreak/><Run Text="Nyamimi - SSL Bypass"/><Run Language="sl-si" Text=" (Aurora.Runtime)"/><LineBreak/><Run/><LineBreak/><Run Text="DLL injection - (link)"/></TextBlock>
+                    <TextBlock Margin="32,10,33,93"><Run Text="Lawin - Server "/><Hyperlink x:Name="Lawinserver_github_link" Foreground="#FF6D6D6D" NavigateUri="https://github.com/Lawin0129/LawinServer" TextDecorations="Underline">Github</Hyperlink><Run Text=" "/><LineBreak/><Run Text="PsychoPastt - Proxy"/> <Hyperlink x:Name="prexy_github_link" Foreground="#FF6D6D6D" NavigateUri="https://github.com/PsychoPast/LawinServer" TextDecorations="Underline">Github</Hyperlink><LineBreak/><Run/><LineBreak/><Run Text="Nyamimi - SSL Bypass (Aurora.Runtime)"/><LineBreak/><Run Language="sl-si"/><LineBreak/><Run Language="sl-si" Text="SSL Injection "/> <Hyperlink x:Name="injection_github_link" Foreground="#FF6D6D6D" NavigateUri="https://github.com/Londiuh/FortniteLauncher" TextDecorations="Underline">Github</Hyperlink></TextBlock>
                 </Grid>
             </TabItem>
         </TabControl>
