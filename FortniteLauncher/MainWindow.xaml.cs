@@ -19,6 +19,8 @@ using System.Drawing;
 using System.Diagnostics;
 using FortniteLauncher.Cores;
 using FortniteLauncher.Server;
+using System.Threading;
+using System.Runtime.InteropServices;
 
 namespace FortniteLauncher
 {
@@ -27,11 +29,16 @@ namespace FortniteLauncher
     /// </summary>
     public partial class MainWindow : Window
     {
-        ///FortniteGame/Binaries/Win64/FortniteLauncher.exe
-        public string DefaultFNPath = "/FortniteGame/Binaries/Win64/FortniteLauncher.exe";
+        ///FortniteGame/Binaries/Win64/FortniteLauncher.exe <summary>
+        /// FortniteGame/Binaries/Win64/FortniteClient-Win64-Shipping.exe
+        /// </summary>
+        public string DefaultFNPath = "/FortniteGame/Binaries/Win64/FortniteClient-Win64-Shipping.exe";
         public string path { get; set; }
         public string serverON { get; set; }
         public string ISfsOK { get; set; }
+
+        [DllImport("kernel32.dll", EntryPoint = "AllocConsole", SetLastError = true, CharSet = CharSet.Auto, CallingConvention = CallingConvention.StdCall)]
+        private static extern int AllocConsole();
         public MainWindow()
         {
             InitializeComponent();
@@ -58,10 +65,24 @@ namespace FortniteLauncher
             Process FNprocess = new Process();
             string pathfromuser = PathBOx.Text;
             string fullpath = pathfromuser + DefaultFNPath;
-            FNprocess.StartInfo.Arguments = "-epicapp=Fortnite -epicenv=Prod -epicportal -epiclocale=en-us -skippatchcheck -NOSSLPINNING -FORCECONSOLE";
+            FNprocess.StartInfo.Arguments = "-epicapp=Fortnite -epicenv=Prod -epicportal -noeac -nobe -epiclocale=en-us -skippatchcheck -log -NOSSLPINNING -FORCECONSOLE";
             FNprocess.StartInfo.FileName = fullpath;
+            FNprocess.StartInfo.UseShellExecute = false;
+            FNprocess.StartInfo.RedirectStandardOutput = true;
             System.Windows.MessageBox.Show(fullpath);
+            //AllocConsole();
             FNprocess.Start();
+            //inject a ssl bypass dll from nyamimi
+
+            AsyncStreamReader asyncOutputReader = new AsyncStreamReader(FNprocess.StandardOutput);
+            asyncOutputReader.DataReceived += delegate (object sender, string data)
+            {
+                Console.WriteLine(data);
+            };
+
+            asyncOutputReader.Start();
+
+            InjectSSLbypass.InjectDll(FNprocess.Id, "LauncherData/AuroraNative.dll");
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)

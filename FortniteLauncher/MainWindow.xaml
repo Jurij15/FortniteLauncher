@@ -21,7 +21,7 @@
                 <Grid Height="248">
                     <Label HorizontalAlignment="Right" Margin="0,21,335,205" Width="88">Fortnite path:</Label>
                     <TextBox TextChanged="PathBOx_TextChanged" Margin="103,10,10,205" FontSize="14" x:Name="PathBOx"/>
-                    <Button x:Name="LaunchBtn" Content="LAUNCH! (might not work atm)s" Click="LaunchBtn_Click" Margin="0,177,0,0" VerticalAlignment="Top" Height="45" Width="411" HorizontalAlignment="Center"/>
+                    <Button x:Name="LaunchBtn" Content="LAUNCH!" Click="LaunchBtn_Click" Margin="0,177,0,0" VerticalAlignment="Top" Height="45" Width="411" HorizontalAlignment="Center"/>
                     <Button x:Name="ExploreBtn" Click="ExploreBtn_Click" Content="Explore" Margin="302,48,0,0" VerticalAlignment="Top" Width="120"/>
                     <Image x:Name="SeasonImage" Height="121" Margin="14,48,288,0" VerticalAlignment="Top" Width="131"/>
                     <TextBlock HorizontalAlignment="Left" Margin="200,0,0,0" TextWrapping="Wrap" Text="The directory must contain the FortniteGame and Engine folders!" VerticalAlignment="Center" Width="222" Height="40"/>
@@ -51,7 +51,7 @@
                     <Button x:Name="OpenFS" Click="OpenFS_Click" Content="Open FileSystem" Margin="130,174,0,0" VerticalAlignment="Top" Width="136"/>
                     <Button Content="Fix not starting" x:Name="FixBtn" Click="FixBtn_Click" Margin="271,174,0,0" VerticalAlignment="Top" Width="131"/>
                     <TextBlock Text="VersionHere" x:Name="VersionBox" Margin="126,211,163,15" FontWeight="Bold"/>
-                    <TextBlock HorizontalAlignment="Left" Margin="25,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="159" Width="377"><Run Text="Lawin - Server "/><Run Language="sl-si" Text="(link)"/><LineBreak/><Run Text="PsychoPast - Proxy"/><Run Language="sl-si" Text=" (link)"/></TextBlock>
+                    <TextBlock HorizontalAlignment="Left" Margin="25,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="159" Width="377"><Run Text="Lawin - Server "/><Run Text="(link)"/><LineBreak/><Run Text="PsychoPast - Proxy"/><Run Text=" (link)"/><LineBreak/><Run Text="Nyamimi - SSL Bypass"/><Run Language="sl-si" Text=" (Aurora.Runtime)"/><LineBreak/><Run/><LineBreak/><Run Text="DLL injection - (link)"/></TextBlock>
                 </Grid>
             </TabItem>
         </TabControl>
