@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Windows;
+using ModernWpf.Controls;
 
 namespace FortniteLauncher.Server
 {
@@ -14,7 +15,12 @@ namespace FortniteLauncher.Server
         {
             if (Directory.Exists("LauncherData/LawinServer/LawinServer-main"))
             {
-                MessageBox.Show("LawinServer already installed! Try Reinstall/Update");
+                
+                ContentDialog dialog = new ContentDialog();
+                dialog.Title = "Error";
+                dialog.Content = "LawinServer already installed! Try reinstall/update!";
+                dialog.CloseButtonText = "OK";
+                dialog.ShowAsync();
             }
             else if (!Directory.Exists("LauncherData/LawinServer/LawinServer-main"))
             {

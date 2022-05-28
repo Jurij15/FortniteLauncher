@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using FortniteLauncher.Cores;
 using System.IO;
 using System.Windows;
+using ModernWpf.Controls;
 
 namespace FortniteLauncher.Server
 {
@@ -15,7 +16,12 @@ namespace FortniteLauncher.Server
         {
             if (!File.Exists("LauncherData/LawinServer/LawinServer-main/CloudStorage/DefaultEngine.ini"))
             {
-                MessageBox.Show("Install/Reinstall LawinServer first!");
+                //MessageBox.Show("Install/Reinstall LawinServer first!");
+                ContentDialog dialog = new ContentDialog();
+                dialog.Title = "Error";
+                dialog.Content = "Install/Reinstall LawinServer first!";
+                dialog.CloseButtonText = "OK";
+                dialog.ShowAsync();
             }
             else if (File.Exists("LauncherData/LawinServer/LawinServer-main/CloudStorage/DefaultEngine.ini"))
             {
@@ -27,7 +33,12 @@ namespace FortniteLauncher.Server
         {
             if (!File.Exists("LauncherData/LawinServer/LawinServer-main/CloudStorage/DefaultEngine.ini"))
             {
-                MessageBox.Show("Install/Reinstall LawinServer first!");
+                //MessageBox.Show("Install/Reinstall LawinServer first!");
+                ContentDialog dialog = new ContentDialog();
+                dialog.Title = "Error";
+                dialog.Content = "Install/Reinstall LawinServer first!";
+                dialog.CloseButtonText = "OK";
+                dialog.ShowAsync();
             }
             else if (File.Exists("LauncherData/LawinServer/LawinServer-main/CloudStorage/DefaultEngine.ini"))
             {

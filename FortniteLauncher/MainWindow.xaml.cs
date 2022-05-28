@@ -21,6 +21,8 @@ using FortniteLauncher.Cores;
 using FortniteLauncher.Server;
 using System.Threading;
 using System.Runtime.InteropServices;
+using ModernWpf;
+using ModernWpf.Controls;
 
 namespace FortniteLauncher
 {
@@ -69,7 +71,7 @@ namespace FortniteLauncher
             FNprocess.StartInfo.FileName = fullpath;
             FNprocess.StartInfo.UseShellExecute = false;
             FNprocess.StartInfo.RedirectStandardOutput = true;
-            System.Windows.MessageBox.Show(fullpath);
+            //System.Windows.MessageBox.Show(fullpath);
             //AllocConsole();
             FNprocess.Start();
             //inject a ssl bypass dll from nyamimi
@@ -187,7 +189,12 @@ namespace FortniteLauncher
 
         private void IncludedProxyUSE_Checked(object sender, RoutedEventArgs e)
         {
-            System.Windows.MessageBox.Show("WARNING! Using this Proxy may cause instability and Fortnite disconnecting from server! Rather use Fiddler!");
+            //System.Windows.MessageBox.Show("WARNING! Using this Proxy may cause instability and Fortnite disconnecting from server! Rather use Fiddler!");
+            ContentDialog proxywarningdialog = new ContentDialog();
+            proxywarningdialog.Title = "Warning";
+            proxywarningdialog.Content = "Using this Proxy may cause instability and Fortnite disconnecting from server! Rather use Fiddler!";
+            proxywarningdialog.CloseButtonText = "OK";
+            proxywarningdialog.ShowAsync();
         }
 
         private void OpenFS_Click(object sender, RoutedEventArgs e)
