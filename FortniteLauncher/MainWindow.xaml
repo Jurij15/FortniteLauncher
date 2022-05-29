@@ -25,6 +25,7 @@
                     <Button x:Name="ExploreBtn" Click="ExploreBtn_Click" Content="Explore" Margin="302,48,0,0" VerticalAlignment="Top" Width="120"/>
                     <Image x:Name="SeasonImage" Height="121" Margin="14,48,288,0" VerticalAlignment="Top" Width="131"/>
                     <TextBlock HorizontalAlignment="Left" Margin="200,0,0,0" TextWrapping="Wrap" Text="The directory must contain the FortniteGame and Engine folders!" VerticalAlignment="Center" Width="222" Height="40"/>
+                    <TextBlock x:Name="testingmessageblock" HorizontalAlignment="Left" Margin="14,140,0,0" TextWrapping="Wrap" Text="This is a preview beta build of FortniteLauncher! You might experience crashes, errors and unexplained glitches!" VerticalAlignment="Top" Width="401" Height="32"/>
                 </Grid>
             </TabItem>
             <TabItem Header="LawinServer">
@@ -47,11 +48,13 @@
                     <ui:SymbolIcon Symbol="ContactInfo" />
                 </ui:TabItemHelper.Icon>
                 <Grid Height="248">
-                    <Button Background="{DynamicResource BG}" Content="Delete Server" x:Name="DeleteServerBtn" Click="DeleteServerBtn_Click" Margin="25,174,0,0" VerticalAlignment="Top"/>
-                    <Button x:Name="OpenFS" Click="OpenFS_Click" Content="Open FileSystem" Margin="130,174,0,0" VerticalAlignment="Top" Width="136"/>
-                    <Button Content="Fix not starting" x:Name="FixBtn" Click="FixBtn_Click" Margin="271,174,0,0" VerticalAlignment="Top" Width="131"/>
+                    <Button Background="{DynamicResource BG}" Content="Delete Server" x:Name="DeleteServerBtn" Click="DeleteServerBtn_Click" Margin="30,174,0,0" VerticalAlignment="Top"/>
+                    <Button Content="Open GitHub" x:Name="OpenLGit" Click="OpenLGit_Click" Margin="271,174,0,0" VerticalAlignment="Top" Width="131"/>
+                    <Button Content="Fix not starting" x:Name="FixBtn" Click="FixBtn_Click" Margin="135,174,0,0" VerticalAlignment="Top" Width="131"/>
                     <TextBlock Text="VersionHere" x:Name="VersionBox" Margin="126,211,163,15" FontWeight="Bold"/>
-                    <TextBlock Margin="32,10,33,93"><Run Text="Lawin - Server "/><Hyperlink x:Name="Lawinserver_github_link" Foreground="#FF6D6D6D" NavigateUri="https://github.com/Lawin0129/LawinServer" TextDecorations="Underline">Github</Hyperlink><Run Text=" "/><LineBreak/><Run Text="PsychoPastt - Proxy"/> <Hyperlink x:Name="prexy_github_link" Foreground="#FF6D6D6D" NavigateUri="https://github.com/PsychoPast/LawinServer" TextDecorations="Underline">Github</Hyperlink><LineBreak/><Run/><LineBreak/><Run Text="Nyamimi - SSL Bypass (Aurora.Runtime)"/><LineBreak/><Run Language="sl-si"/><LineBreak/><Run Language="sl-si" Text="SSL Injection "/> <Hyperlink x:Name="injection_github_link" Foreground="#FF6D6D6D" NavigateUri="https://github.com/Londiuh/FortniteLauncher" TextDecorations="Underline">Github</Hyperlink></TextBlock>
+                    <TextBlock Margin="32,10,33,116"><Run Text="Lawin - Server "/><Hyperlink x:Name="Lawinserver_github_link" Foreground="#FF6D6D6D" NavigateUri="https://github.com/Lawin0129/LawinServer" TextDecorations="Underline">Github</Hyperlink><Run Text=" "/><LineBreak/><Run Text="PsychoPastt - Proxy"/> <Hyperlink x:Name="prexy_github_link" Foreground="#FF6D6D6D" NavigateUri="https://github.com/PsychoPast/LawinServer" TextDecorations="Underline">Github</Hyperlink><LineBreak/><Run/><LineBreak/><Run Text="Nyamimi - SSL Bypass (Aurora.Runtime)"/><LineBreak/><Run Language="sl-si"/><LineBreak/><Run Language="sl-si" Text="SSL Injection "/> <Hyperlink x:Name="injection_github_link" Foreground="#FF6D6D6D" NavigateUri="https://github.com/Londiuh/FortniteLauncher" TextDecorations="Underline">Github</Hyperlink></TextBlock>
+                    <RadioButton Content="Light Mode" Margin="91,137,0,0" VerticalAlignment="Top" x:Name="LightModeBtn" Click="LightModeBtn_Click"/>
+                    <RadioButton Content="Dark Mode" Margin="216,137,0,0" VerticalAlignment="Top" x:Name="DarkModeBtn" Click="DarkModeBtn_Click"/>
                 </Grid>
             </TabItem>
         </TabControl>

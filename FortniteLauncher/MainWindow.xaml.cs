@@ -49,8 +49,15 @@ namespace FortniteLauncher
             if (Version.VersionFull.Contains("Preview"))
             {
                 TestingWelcome t = new TestingWelcome();
-                t.ShowDialog();
+                //t.ShowDialog();
+                testingmessageblock.Visibility = Visibility.Visible;
             }
+            else if (!Version.VersionFull.Contains("Preview"))
+            {
+                testingmessageblock.Visibility = Visibility.Hidden;
+            }
+            ThemeManager.Current.ApplicationTheme = ApplicationTheme.Dark;
+            DarkModeBtn.IsChecked = true;
         }
 
         private void ExploreBtn_Click(object sender, RoutedEventArgs e)
@@ -206,6 +213,34 @@ namespace FortniteLauncher
         private void Lawinserver_github_link_RequestNavigate(object sender, RequestNavigateEventArgs e)
         {
             System.Diagnostics.Process.Start(e.Uri.ToString());
+        }
+
+        private void OpenLGit_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                //from https://iqcode.com/code/csharp/c-open-web-page-in-default-browser
+
+                var uri = "https://github.com/Jurij15/FortniteLauncher";
+                var psi = new System.Diagnostics.ProcessStartInfo();
+                psi.UseShellExecute = true;
+                psi.FileName = uri;
+                System.Diagnostics.Process.Start(psi);
+            }
+            catch (Exception ex)
+            {
+                System.Windows.MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void LightModeBtn_Click(object sender, RoutedEventArgs e)
+        {
+            ThemeManager.Current.ApplicationTheme = ApplicationTheme.Light;
+        }
+
+        private void DarkModeBtn_Click(object sender, RoutedEventArgs e)
+        {
+            ThemeManager.Current.ApplicationTheme = ApplicationTheme.Dark;
         }
     }
 }
