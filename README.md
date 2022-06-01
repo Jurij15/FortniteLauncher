@@ -68,3 +68,9 @@ class Handlers
 ### Fortnite is showing `Unable to login to Fortnite servers`
 - Restart the launcher
 - Use Fiddler instead of the built-in proxy
+
+# Credits
+- [Lawin - LawinServer](https://github.com/Lawin0129/LawinServer) [Lawin's Discord](https://discord.gg/AtXKh4rZCt)
+- [PsychoPast- Proxy](https://github.com/PsychoPast/LawinServer)
+- Nyamimi - SSL Bypass (Aurora.Runtime)
+- [SSL Injection](https://github.com/Londiuh/FortniteLauncher)
