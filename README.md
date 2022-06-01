@@ -63,8 +63,8 @@ class Handlers
 - Join [Lawin's Discord](https://discord.gg/AtXKh4rZCt) and look in channel #faq-and-troubleshooting
 ### Common issues:
 #### My internet is not working after using LawinServer
--Disable proxy in Windows settings
--Video in Lawin's discord
+- Disable proxy in Windows settings
+- Video in Lawin's discord
 ### Fortnite is showing `Unable to login to Fortnite servers`
 - Restart the launcher
 - Use Fiddler instead of the built-in proxy
