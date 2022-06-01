@@ -6,7 +6,7 @@ Launcher is still being worked on and bugs are expcted!
 # Setup
 ## Prerequisites
 - Download and install [NodeJS](https://nodejs.org/en/download/)
-- Download and install [.NET 6](https://nodejs.org/en/download/](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
+- Download and install [.NET 6](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
 - Download and install [Fiddler Classic](https://www.telerik.com/download/fiddler)
 ## Proxy setup
 Even though proxy is included in the launcher, it can cause issues. I recommend using Fiddler.
