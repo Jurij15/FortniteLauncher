@@ -105,6 +105,17 @@ namespace FortniteLauncher
             {
                 //nothing, countiniue
             }
+            else if (IncludedProxyUSE.IsChecked == true)
+            {
+                Process[] proxyprocess = Process.GetProcessesByName("LawinServerProxy.exe");
+                proxyprocess[0].Kill();
+                proxyprocess[0].Dispose();
+                proxyprocess[0].Close();
+            }
+            else if (IncludedProxyUSE.IsChecked == false)
+            {
+
+            }
             Environment.Exit(0);
         }
 

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FortniteLauncher"
         mc:Ignorable="d"
-        Title="FortniteLauncher" Height="304" Width="433" ResizeMode="CanMinimize"
+        Title="FortniteLauncher" Height="333" Width="473" ResizeMode="CanMinimize"
         xmlns:ui="http://schemas.modernwpf.com/2019"
         Closing="Window_Closing"
         ui:WindowHelper.UseModernWindowStyle="True">
@@ -18,43 +18,43 @@
                 <ui:TabItemHelper.Icon>
                     <ui:SymbolIcon Symbol="Play" />
                 </ui:TabItemHelper.Icon>
-                <Grid Height="248">
-                    <Label HorizontalAlignment="Right" Margin="0,21,335,205" Width="88">Fortnite path:</Label>
-                    <TextBox TextChanged="PathBOx_TextChanged" Margin="103,10,10,205" FontSize="14" x:Name="PathBOx"/>
-                    <Button x:Name="LaunchBtn" Content="LAUNCH!" Click="LaunchBtn_Click" Margin="0,177,0,0" VerticalAlignment="Top" Height="45" Width="411" HorizontalAlignment="Center"/>
-                    <Button x:Name="ExploreBtn" Click="ExploreBtn_Click" Content="Explore" Margin="302,48,0,0" VerticalAlignment="Top" Width="120"/>
-                    <Image x:Name="SeasonImage" Height="121" Margin="14,48,288,0" VerticalAlignment="Top" Width="131"/>
-                    <TextBlock HorizontalAlignment="Left" Margin="200,0,0,0" TextWrapping="Wrap" Text="The directory must contain the FortniteGame and Engine folders!" VerticalAlignment="Center" Width="222" Height="40"/>
-                    <TextBlock x:Name="testingmessageblock" HorizontalAlignment="Left" Margin="14,140,0,0" TextWrapping="Wrap" Text="This is a preview beta build of FortniteLauncher! You might experience crashes, errors and unexplained glitches!" VerticalAlignment="Top" Width="401" Height="32"/>
+                <Grid Height="275">
+                    <Label HorizontalAlignment="Right" Margin="0,16,371,210" Width="88">Fortnite path:</Label>
+                    <TextBox TextChanged="PathBOx_TextChanged" Margin="103,10,10,232" FontSize="14" x:Name="PathBOx"/>
+                    <Button x:Name="LaunchBtn" Content="LAUNCH!" Click="LaunchBtn_Click" Margin="0,205,0,0" VerticalAlignment="Top" Height="45" Width="453" HorizontalAlignment="Center"/>
+                    <Button x:Name="ExploreBtn" Click="ExploreBtn_Click" Content="Explore" Margin="343,48,0,0" VerticalAlignment="Top" Width="120"/>
+                    <Image x:Name="SeasonImage" Height="153" Margin="18,48,305,0" VerticalAlignment="Top"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="241,98,0,0" TextWrapping="Wrap" Text="The directory must contain the FortniteGame and Engine folders!" VerticalAlignment="Top" Width="222" Height="40"/>
+                    <TextBlock x:Name="testingmessageblock" HorizontalAlignment="Center" Margin="0,168,0,0" TextWrapping="Wrap" Text="This is a preview beta build of FortniteLauncher! You might experience crashes, errors and unexplained glitches!" VerticalAlignment="Top" Width="401" Height="32"/>
                 </Grid>
             </TabItem>
             <TabItem Header="LawinServer">
                 <ui:TabItemHelper.Icon>
                     <ui:SymbolIcon Symbol="Sync" />
                 </ui:TabItemHelper.Icon>
-                <Grid Height="248">
-                    <Image Source="/lawinserverImage.png" Margin="0,0,0,183"/>
-                    <Button x:Name="DisBtn" Content="Discord" Click="DisBtn_Click" Margin="0,68,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Width="413"/>
-                    <Button x:Name="InstallLawinBtn" Click="InstallLawinBtn_Click" Content="Install" Margin="10,124,0,0" VerticalAlignment="Top" Width="206"/>
-                    <Button x:Name="ReinstallUpdateBtn" Click="ReinstallUpdateBtn_Click" Content="Reinstall/Update" Margin="225,124,0,0" VerticalAlignment="Top" Width="198"/>
-                    <CheckBox x:Name="PartiesCheckBox" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked" Content="Use Parties XMPP" Margin="10,161,0,0" VerticalAlignment="Top"/>
-                    <Button Content="Start!" Margin="225,161,0,0" VerticalAlignment="Top" Width="198" x:Name="StartBtn" Click="StartBtn_Click" />
+                <Grid Height="277">
+                    <Image Source="/lawinserverImage.png" Margin="0,0,0,211"/>
+                    <Button x:Name="DisBtn" Content="Discord" Click="DisBtn_Click" Margin="0,71,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Width="453"/>
+                    <Button x:Name="InstallLawinBtn" Click="InstallLawinBtn_Click" Content="Install" Margin="10,0,0,0" Width="226"/>
+                    <Button x:Name="ReinstallUpdateBtn" Click="ReinstallUpdateBtn_Click" Content="Reinstall/Update" Margin="241,0,0,0" Width="222"/>
+                    <CheckBox x:Name="PartiesCheckBox" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked" Content="Use Parties XMPP" Margin="30,161,0,0" VerticalAlignment="Top"/>
+                    <Button Content="Start!" Margin="241,161,0,0" VerticalAlignment="Top" Width="222" x:Name="StartBtn" Click="StartBtn_Click" />
                     <TextBlock x:Name="CurrentStatus" HorizontalAlignment="Left" Margin="225,105,0,0" TextWrapping="Wrap" Text="  " VerticalAlignment="Top" Width="198"/>
-                    <CheckBox x:Name="IncludedProxyUSE" Checked="IncludedProxyUSE_Checked" Content="Use included Proxy" Margin="10,193,0,0" VerticalAlignment="Top" Width="136"/>
+                    <CheckBox x:Name="IncludedProxyUSE" Checked="IncludedProxyUSE_Checked" Content="Use included Proxy" Margin="30,193,0,0" VerticalAlignment="Top" Width="136"/>
                 </Grid>
             </TabItem>
             <TabItem Header="About">
                 <ui:TabItemHelper.Icon>
                     <ui:SymbolIcon Symbol="ContactInfo" />
                 </ui:TabItemHelper.Icon>
-                <Grid Height="248">
-                    <Button Background="{DynamicResource BG}" Content="Delete Server" x:Name="DeleteServerBtn" Click="DeleteServerBtn_Click" Margin="30,174,0,0" VerticalAlignment="Top"/>
-                    <Button Content="Open GitHub" x:Name="OpenLGit" Click="OpenLGit_Click" Margin="271,174,0,0" VerticalAlignment="Top" Width="131"/>
-                    <Button Content="Fix not starting" x:Name="FixBtn" Click="FixBtn_Click" Margin="135,174,0,0" VerticalAlignment="Top" Width="131"/>
-                    <TextBlock Text="VersionHere" x:Name="VersionBox" Margin="126,211,163,15" FontWeight="Bold"/>
-                    <TextBlock Margin="32,10,33,116"><Run Text="Lawin - Server "/><Hyperlink x:Name="Lawinserver_github_link" Foreground="#FF6D6D6D" NavigateUri="https://github.com/Lawin0129/LawinServer" TextDecorations="Underline">Github</Hyperlink><Run Text=" "/><LineBreak/><Run Text="PsychoPastt - Proxy"/> <Hyperlink x:Name="prexy_github_link" Foreground="#FF6D6D6D" NavigateUri="https://github.com/PsychoPast/LawinServer" TextDecorations="Underline">Github</Hyperlink><LineBreak/><Run/><LineBreak/><Run Text="Nyamimi - SSL Bypass (Aurora.Runtime)"/><LineBreak/><Run Language="sl-si"/><LineBreak/><Run Language="sl-si" Text="SSL Injection "/> <Hyperlink x:Name="injection_github_link" Foreground="#FF6D6D6D" NavigateUri="https://github.com/Londiuh/FortniteLauncher" TextDecorations="Underline">Github</Hyperlink></TextBlock>
+                <Grid Height="275">
+                    <Button Background="{DynamicResource BG}" Content="Delete Server" x:Name="DeleteServerBtn" Click="DeleteServerBtn_Click" Margin="33,174,0,0" VerticalAlignment="Top" Width="133"/>
+                    <Button Content="Open GitHub" x:Name="OpenLGit" Click="OpenLGit_Click" Margin="307,174,0,0" VerticalAlignment="Top" Width="131"/>
+                    <Button Content="Fix not starting" x:Name="FixBtn" Click="FixBtn_Click" Margin="0,174,0,0" VerticalAlignment="Top" Width="131" HorizontalAlignment="Center"/>
+                    <TextBlock Text="VersionHere" x:Name="VersionBox" Margin="144,216,145,10" FontWeight="Bold"/>
+                    <TextBlock Margin="33,10,33,116"><Run Text="Lawin - Server "/><Hyperlink x:Name="Lawinserver_github_link" Foreground="#FF6D6D6D" NavigateUri="https://github.com/Lawin0129/LawinServer" TextDecorations="Underline">Github</Hyperlink><Run Text=" "/><LineBreak/><Run Text="PsychoPastt - Proxy"/> <Hyperlink x:Name="prexy_github_link" Foreground="#FF6D6D6D" NavigateUri="https://github.com/PsychoPast/LawinServer" TextDecorations="Underline">Github</Hyperlink><LineBreak/><Run/><LineBreak/><Run Text="Nyamimi - SSL Bypass (Aurora.Runtime)"/><LineBreak/><Run Language="sl-si"/><LineBreak/><Run Language="sl-si" Text="SSL Injection "/> <Hyperlink x:Name="injection_github_link" Foreground="#FF6D6D6D" NavigateUri="https://github.com/Londiuh/FortniteLauncher" TextDecorations="Underline">Github</Hyperlink></TextBlock>
                     <RadioButton Content="Light Mode" Margin="91,137,0,0" VerticalAlignment="Top" x:Name="LightModeBtn" Click="LightModeBtn_Click"/>
-                    <RadioButton Content="Dark Mode" Margin="216,137,0,0" VerticalAlignment="Top" x:Name="DarkModeBtn" Click="DarkModeBtn_Click"/>
+                    <RadioButton Content="Dark Mode" Margin="252,138,0,0" VerticalAlignment="Top" x:Name="DarkModeBtn" Click="DarkModeBtn_Click"/>
                 </Grid>
             </TabItem>
         </TabControl>
