@@ -7,6 +7,8 @@
     <UseWPF>true</UseWPF>
 	  <UseWindowsForms>True</UseWindowsForms>
 	  <ApplicationManifest>app.manifest</ApplicationManifest>
+	  <ApplicationIcon>FNLauncher_Icon.ico</ApplicationIcon>
+	  <PackageIcon>FNLauncher_Icon.png</PackageIcon>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -19,9 +21,13 @@
 
   <ItemGroup>
     <Compile Remove="Proxy\**" />
+    <Compile Remove="Versions\1.0.0.0-Beta\**" />
     <EmbeddedResource Remove="Proxy\**" />
+    <EmbeddedResource Remove="Versions\1.0.0.0-Beta\**" />
     <None Remove="Proxy\**" />
+    <None Remove="Versions\1.0.0.0-Beta\**" />
     <Page Remove="Proxy\**" />
+    <Page Remove="Versions\1.0.0.0-Beta\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -30,6 +36,10 @@
 
   <ItemGroup>
     <Page Remove="Cores\PreviewWelcome.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="FNLauncher_Icon.ico" />
   </ItemGroup>
 
   <ItemGroup>
@@ -42,7 +52,13 @@
 
   <ItemGroup>
     <Folder Include="Launcher\LauncherData\Proxy\" />
-    <Folder Include="Versions\1.0.0.0-Beta\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="FNLauncher_Icon.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>

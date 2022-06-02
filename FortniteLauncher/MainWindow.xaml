@@ -41,6 +41,7 @@
                     <Button Content="Start!" Margin="241,161,0,0" VerticalAlignment="Top" Width="222" x:Name="StartBtn" Click="StartBtn_Click" />
                     <TextBlock x:Name="CurrentStatus" HorizontalAlignment="Left" Margin="225,105,0,0" TextWrapping="Wrap" Text="  " VerticalAlignment="Top" Width="198"/>
                     <CheckBox x:Name="IncludedProxyUSE" Checked="IncludedProxyUSE_Checked" Content="Use included Proxy" Margin="30,193,0,0" VerticalAlignment="Top" Width="136"/>
+                    <ProgressBar x:Name="LoadProgBar" HorizontalAlignment="Left" Height="26" Margin="245,204,0,0" VerticalAlignment="Top" Width="218"/>
                 </Grid>
             </TabItem>
             <TabItem Header="About">
