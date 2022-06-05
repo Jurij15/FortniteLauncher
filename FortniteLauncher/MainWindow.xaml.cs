@@ -58,6 +58,7 @@ namespace FortniteLauncher
             }
             ThemeManager.Current.ApplicationTheme = ApplicationTheme.Dark;
             DarkModeBtn.IsChecked = true;
+            PartiesCheckBox.IsChecked = false;
         }
 
         private void ExploreBtn_Click(object sender, RoutedEventArgs e)

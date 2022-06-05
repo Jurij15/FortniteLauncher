@@ -14,6 +14,7 @@ namespace FortniteLauncher.Server
     {
         public void EnableParties()
         {
+            MainWindow main = new MainWindow();
             if (!File.Exists("LauncherData/LawinServer/LawinServer-main/CloudStorage/DefaultEngine.ini"))
             {
                 //MessageBox.Show("Install/Reinstall LawinServer first!");
@@ -22,6 +23,7 @@ namespace FortniteLauncher.Server
                 dialog.Content = "Install/Reinstall LawinServer first!";
                 dialog.CloseButtonText = "OK";
                 dialog.ShowAsync();
+                main.PartiesCheckBox.IsChecked = false;
             }
             else if (File.Exists("LauncherData/LawinServer/LawinServer-main/CloudStorage/DefaultEngine.ini"))
             {
@@ -31,6 +33,7 @@ namespace FortniteLauncher.Server
         }
         public void DisableParties()
         {
+            MainWindow main = new MainWindow();
             if (!File.Exists("LauncherData/LawinServer/LawinServer-main/CloudStorage/DefaultEngine.ini"))
             {
                 //MessageBox.Show("Install/Reinstall LawinServer first!");
@@ -39,6 +42,7 @@ namespace FortniteLauncher.Server
                 dialog.Content = "Install/Reinstall LawinServer first!";
                 dialog.CloseButtonText = "OK";
                 dialog.ShowAsync();
+                main.PartiesCheckBox.IsChecked = false;
             }
             else if (File.Exists("LauncherData/LawinServer/LawinServer-main/CloudStorage/DefaultEngine.ini"))
             {
