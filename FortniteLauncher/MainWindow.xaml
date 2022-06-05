@@ -14,17 +14,17 @@
     </Window.Resources>
     <ui:SimpleStackPanel>
         <TabControl>
-            <TabItem Header="Game">
+            <TabItem Header="Play">
                 <ui:TabItemHelper.Icon>
                     <ui:SymbolIcon Symbol="Play" />
                 </ui:TabItemHelper.Icon>
                 <Grid Height="275">
                     <Label HorizontalAlignment="Right" Margin="0,16,371,210" Width="88">Fortnite path:</Label>
-                    <TextBox TextChanged="PathBOx_TextChanged" Margin="103,10,10,232" FontSize="14" x:Name="PathBOx"/>
+                    <TextBox TextChanged="PathBOx_TextChanged" Margin="103,10,117,232" FontSize="14" x:Name="PathBOx"/>
                     <Button x:Name="LaunchBtn" Content="LAUNCH!" Click="LaunchBtn_Click" Margin="0,205,0,0" VerticalAlignment="Top" Height="45" Width="453" HorizontalAlignment="Center"/>
-                    <Button x:Name="ExploreBtn" Click="ExploreBtn_Click" Content="Explore" Margin="343,48,0,0" VerticalAlignment="Top" Width="120"/>
-                    <Image x:Name="SeasonImage" Height="153" Margin="18,48,305,0" VerticalAlignment="Top"/>
-                    <TextBlock HorizontalAlignment="Left" Margin="241,98,0,0" TextWrapping="Wrap" Text="The directory must contain the FortniteGame and Engine folders!" VerticalAlignment="Top" Width="222" Height="40"/>
+                    <Button x:Name="ExploreBtn" Click="ExploreBtn_Click" Content="Explore" Margin="236,48,0,0" VerticalAlignment="Top" Width="120"/>
+                    <Image x:Name="SeasonImage" Height="138" Margin="359,10,6,0" VerticalAlignment="Top"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="14,48,0,0" TextWrapping="Wrap" Text="The directory must contain the FortniteGame and Engine folders!" VerticalAlignment="Top" Width="222" Height="40"/>
                     <TextBlock x:Name="testingmessageblock" HorizontalAlignment="Center" Margin="0,168,0,0" TextWrapping="Wrap" Text="This is a preview beta build of FortniteLauncher! You might experience crashes, errors and unexplained glitches!" VerticalAlignment="Top" Width="401" Height="32"/>
                 </Grid>
             </TabItem>
