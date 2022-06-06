@@ -15,7 +15,6 @@ If you encounter any issues, scroll down to Troubleshooting section
 ## Proxy setup
 Even though proxy is included in the launcher, it can cause issues. I recommend using Fiddler.
 ### Fiddler setup
-- Video: tbd
 - Make sure you have installed Fiddler from the above link,
 - Open Fiddler and click on the FiddlerScript tab
 - Delete everything that is there and paste this script in:
