@@ -4,7 +4,7 @@ A simple launcher for LawinServer, made in C# with ModernWPF
 If you encounter any issues, scroll down to Troubleshooting section
 
 # Full tutorial
-- video here after done
+[![tutorial vid](https://img.youtube.com/vi/YzZJmDfQ3ww/0.jpg)](https://www.youtube.com/watch?v=YzZJmDfQ3ww)
 
 # Setup
 ## Prerequisites
