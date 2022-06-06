@@ -1,7 +1,10 @@
 # FortniteLauncher
 A simple launcher for LawinServer, made in C# with ModernWPF
 
-Launcher is still being worked on and bugs are expcted!
+If you encounter any issues, scroll down to Troubleshooting section
+
+# Full tutorial
+- video here after done
 
 # Setup
 ## Prerequisites
@@ -74,3 +77,6 @@ class Handlers
 - [PsychoPast- Proxy](https://github.com/PsychoPast/LawinServer)
 - Nyamimi - SSL Bypass (Aurora.Runtime)
 - [SSL Injection](https://github.com/Londiuh/FortniteLauncher)
+
+# Contact
+- Jurij15#1867 on Discord
