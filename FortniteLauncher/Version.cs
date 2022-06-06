@@ -8,9 +8,9 @@ namespace FortniteLauncher
         //version number
         public static string VersionOnly = "1.0.0.0";
         //version type (Release, preview,...)
-        public static string VersionType = "Beta2";
+        public static string VersionType = "final";
         //anything else
-        public static string VersionNotes = "test";
+        public static string VersionNotes = "demo";
         //full version string
         public static string VersionFull = Version.VersionOnly + "-" + Version.VersionType + "-" + Version.VersionNotes;
     }

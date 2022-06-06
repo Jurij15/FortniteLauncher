@@ -72,28 +72,40 @@ namespace FortniteLauncher
 
         private void LaunchBtn_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow mainWindow = new MainWindow();
-            Process FNprocess = new Process();
-            string pathfromuser = PathBOx.Text;
-            string fullpath = pathfromuser + DefaultFNPath;
-            FNprocess.StartInfo.Arguments = "-epicapp=Fortnite -epicenv=Prod -epicportal -noeac -nobe -epiclocale=en-us -skippatchcheck -log -NOSSLPINNING -FORCECONSOLE";
-            FNprocess.StartInfo.FileName = fullpath;
-            FNprocess.StartInfo.UseShellExecute = false;
-            FNprocess.StartInfo.RedirectStandardOutput = true;
-            //System.Windows.MessageBox.Show(fullpath);
-            //AllocConsole();
-            FNprocess.Start();
-            //inject a ssl bypass dll from nyamimi
-
-            AsyncStreamReader asyncOutputReader = new AsyncStreamReader(FNprocess.StandardOutput);
-            asyncOutputReader.DataReceived += delegate (object sender, string data)
+            Process[] existingprocessmaybe = Process.GetProcessesByName("Fortnite");
+            if (existingprocessmaybe.Length == 0)
             {
-                Console.WriteLine(data);
-            };
+                MainWindow mainWindow = new MainWindow();
+                Process FNprocess = new Process();
+                string pathfromuser = PathBOx.Text;
+                string fullpath = pathfromuser + DefaultFNPath;
+                FNprocess.StartInfo.Arguments = "-epicapp=Fortnite -epicenv=Prod -epicportal -noeac -nobe -epiclocale=en-us -skippatchcheck -log -NOSSLPINNING -FORCECONSOLE";
+                FNprocess.StartInfo.FileName = fullpath;
+                FNprocess.StartInfo.UseShellExecute = false;
+                FNprocess.StartInfo.RedirectStandardOutput = true;
+                //System.Windows.MessageBox.Show(fullpath);
+                //AllocConsole();
+                FNprocess.Start();
+                //inject a ssl bypass dll from nyamimi
 
-            asyncOutputReader.Start();
+                AsyncStreamReader asyncOutputReader = new AsyncStreamReader(FNprocess.StandardOutput);
+                asyncOutputReader.DataReceived += delegate (object sender, string data)
+                {
+                    Console.WriteLine(data);
+                };
 
-            InjectSSLbypass.InjectDll(FNprocess.Id, "LauncherData/AuroraNative.dll");
+                asyncOutputReader.Start();
+
+                InjectSSLbypass.InjectDll(FNprocess.Id, "LauncherData/AuroraNative.dll");
+            }
+            else
+            {
+                ContentDialog dialog = new ContentDialog();
+                dialog.Title = "Fortnite already running!";
+                dialog.Content = "Please Close fortnite and try again!";
+                dialog.CloseButtonText = "OK";
+                dialog.ShowAsync();
+            }
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
