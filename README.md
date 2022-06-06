@@ -11,7 +11,7 @@ If you encounter any issues, scroll down to Troubleshooting section
 - Download and install [NodeJS](https://nodejs.org/en/download/)
 - Download and install [.NET 6 Desktop Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
 - Download and install [Fiddler Classic](https://www.telerik.com/download/fiddler)
-- Have a Fortnite Version you want to use (can be any)
+- Have a Fortnite Version you want to use (can be any) [Download S0-S7 Here!]([https://www.telerik.com/download/fiddler](https://github.com/notsamicc/Fortnite-Builds)))
 ## Proxy setup
 Even though proxy is included in the launcher, it can cause issues. I recommend using Fiddler.
 ### Fiddler setup
