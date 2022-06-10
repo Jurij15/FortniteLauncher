@@ -79,7 +79,7 @@ namespace FortniteLauncher
                 Process FNprocess = new Process();
                 string pathfromuser = PathBOx.Text;
                 string fullpath = pathfromuser + DefaultFNPath;
-                FNprocess.StartInfo.Arguments = "-epicapp=Fortnite -epicenv=Prod -epicportal -noeac -nobe -epiclocale=en-us -skippatchcheck -log -NOSSLPINNING -FORCECONSOLE";
+                FNprocess.StartInfo.Arguments = "-NOSSLPINNING -skippatchcheck -epicportal -HTTP=WinINet";
                 FNprocess.StartInfo.FileName = fullpath;
                 FNprocess.StartInfo.UseShellExecute = false;
                 FNprocess.StartInfo.RedirectStandardOutput = true;
