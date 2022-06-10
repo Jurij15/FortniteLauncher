@@ -4,17 +4,17 @@ A simple launcher for LawinServer, made in C# with ModernWPF
 If you encounter any issues, scroll down to Troubleshooting section
 
 # Full tutorial
-- video here after done
+[![tutorial vid](https://img.youtube.com/vi/YzZJmDfQ3ww/0.jpg)](https://www.youtube.com/watch?v=YzZJmDfQ3ww)
 
 # Setup
 ## Prerequisites
 - Download and install [NodeJS](https://nodejs.org/en/download/)
 - Download and install [.NET 6 Desktop Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
 - Download and install [Fiddler Classic](https://www.telerik.com/download/fiddler)
+- Have a Fortnite Version you want to use (can be any) [Download S0-S7 Here!](https://github.com/notsamicc/Fortnite-Builds)))
 ## Proxy setup
 Even though proxy is included in the launcher, it can cause issues. I recommend using Fiddler.
 ### Fiddler setup
-- Video: tbd
 - Make sure you have installed Fiddler from the above link,
 - Open Fiddler and click on the FiddlerScript tab
 - Delete everything that is there and paste this script in:
