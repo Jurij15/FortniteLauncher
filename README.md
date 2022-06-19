@@ -3,6 +3,8 @@ A simple launcher for LawinServer, made in C# with ModernWPF
 
 If you encounter any issues, scroll down to Troubleshooting section
 
+As of 1.0.0.1, launcher only works on builds 1.7.2 to 5.41!
+
 # Full tutorial
 [![tutorial vid](https://img.youtube.com/vi/YzZJmDfQ3ww/0.jpg)](https://www.youtube.com/watch?v=YzZJmDfQ3ww)
 
