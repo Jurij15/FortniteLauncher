@@ -96,7 +96,7 @@ namespace FortniteLauncher
 
                 asyncOutputReader.Start();
 
-                InjectSSLbypass.InjectDll(FNprocess.Id, "LauncherData/AuroraNative.dll");
+                InjectSSLbypass.InjectDll(FNprocess.Id, "LauncherData/Platanium.dll");
             }
             else
             {
