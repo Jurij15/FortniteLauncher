@@ -26,6 +26,18 @@
                     <Image x:Name="SeasonImage" Height="90" Margin="226,48,140,0" VerticalAlignment="Top"/>
                     <TextBlock HorizontalAlignment="Left" Margin="14,48,0,0" TextWrapping="Wrap" Text="The directory must contain the FortniteGame and Engine folders!" VerticalAlignment="Top" Width="222" Height="40"/>
                     <TextBlock x:Name="testingmessageblock" HorizontalAlignment="Center" Margin="0,168,0,0" TextWrapping="Wrap" Text="This is a preview beta build of FortniteLauncher! You might experience crashes, errors and unexplained glitches!" VerticalAlignment="Top" Width="401" Height="32"/>
+                    <CheckBox Content="Suspend BE" Margin="14,131,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="Suspend EAC" Margin="139,131,0,0" VerticalAlignment="Top"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Player">
+                <ui:TabItemHelper.Icon>
+                    <ui:SymbolIcon Symbol="Contact"/>
+                </ui:TabItemHelper.Icon>
+                <Grid Height="277">
+                    <Label Content="Username" Margin="10,10,391,244"/>
+                    <TextBox x:Name="Username_box" HorizontalAlignment="Center" Margin="0,33,0,0" TextWrapping="Wrap" Text="Player" VerticalAlignment="Top" Width="453"/>
+                    <Button x:Name="SaveUsernameBtn" Click="SaveUsernameBtn_Click" Content="Save" Margin="295,70,0,0" VerticalAlignment="Top" Width="164"/>
                 </Grid>
             </TabItem>
             <TabItem Header="LawinServer">

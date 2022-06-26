@@ -79,7 +79,7 @@ namespace FortniteLauncher
                 Process FNprocess = new Process();
                 string pathfromuser = PathBOx.Text;
                 string fullpath = pathfromuser + DefaultFNPath;
-                FNprocess.StartInfo.Arguments = "-NOSSLPINNING -skippatchcheck -epicportal -HTTP=WinINet";
+                FNprocess.StartInfo.Arguments = "-epicapp=Fortnite -epicenv=Prod -epicportal -epiclocale=en-us -skippatchcheck -NOSSLPINNING -FORCECONSOLE";
                 FNprocess.StartInfo.FileName = fullpath;
                 FNprocess.StartInfo.UseShellExecute = false;
                 FNprocess.StartInfo.RedirectStandardOutput = true;
@@ -96,7 +96,7 @@ namespace FortniteLauncher
 
                 asyncOutputReader.Start();
 
-                InjectSSLbypass.InjectDll(FNprocess.Id, "LauncherData/Platanium.dll");
+                InjectSSLbypass.InjectDll(FNprocess.Id, "LauncherData/AuroraNative.dll");
             }
             else
             {
@@ -222,11 +222,13 @@ namespace FortniteLauncher
         private void IncludedProxyUSE_Checked(object sender, RoutedEventArgs e)
         {
             //System.Windows.MessageBox.Show("WARNING! Using this Proxy may cause instability and Fortnite disconnecting from server! Rather use Fiddler!");
+            /*
             ContentDialog proxywarningdialog = new ContentDialog();
             proxywarningdialog.Title = "Warning";
             proxywarningdialog.Content = "Using this Proxy may cause instability and Fortnite disconnecting from server! Rather use Fiddler!";
             proxywarningdialog.CloseButtonText = "OK";
             proxywarningdialog.ShowAsync();
+            */
         }
 
         private void OpenFS_Click(object sender, RoutedEventArgs e)
@@ -266,6 +268,22 @@ namespace FortniteLauncher
         private void DarkModeBtn_Click(object sender, RoutedEventArgs e)
         {
             ThemeManager.Current.ApplicationTheme = ApplicationTheme.Dark;
+        }
+
+        private void SaveUsernameBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if (Username.SaveUsername(Username_box.Text))
+            {
+                //proceed
+            }
+            else if (!Username.SaveUsername(Username_box.Text))
+            {
+                ContentDialog proxywarningdialog = new ContentDialog();
+                proxywarningdialog.Title = "Error";
+                proxywarningdialog.Content = "Cannot save username!";
+                proxywarningdialog.CloseButtonText = "OK";
+                proxywarningdialog.ShowAsync();
+            }
         }
     }
 }

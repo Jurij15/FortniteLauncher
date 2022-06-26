@@ -11,6 +11,7 @@ namespace FortniteLauncher.Cores
         public static string PartiesXMPP = "LauncherData/LawinServer/PartiesXMPP.ini";
         public static string Depencencies = "LauncherData/LawinServer-Main/install_packages.bat";
         public static string IncludedProxy = "LauncherData/Proxy/LawinServerProxy.exe";
+        public static string UsernameConfing = "LauncherData/Config/Username";
 
         //lawinserver git string
         public static string LawinGit = "https://github.com/Lawin0129/LawinServer/archive/refs/heads/main.zip";
