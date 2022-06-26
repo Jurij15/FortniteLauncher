@@ -66,12 +66,10 @@ namespace FortniteLauncher.Cores
                     {
                         //delete the file
                         File.Delete(AppPaths.UsernameConfing);
-                        //create a file and write the new username to it
-                        File.Create(AppPaths.UsernameConfing);
-                        using (StreamWriter sw = new StreamWriter(AppPaths.UsernameConfing))
+                        File.Delete(AppPaths.UsernameConfing);
+                        using (FileStream fs = File.Create(AppPaths.UsernameConfing))
                         {
-                            sw.WriteLine(name);
-                            sw.Close();
+                            byte[] info = new UTF8Encoding(true).GetBytes(name);
                         }
                         return true;
                     }
@@ -82,14 +80,10 @@ namespace FortniteLauncher.Cores
                 }
                 else if (File.Exists(AppPaths.UsernameConfing))
                 {
-                    //delete the file
                     File.Delete(AppPaths.UsernameConfing);
-                    //create a file and write the new username to it
-                    File.Create(AppPaths.UsernameConfing);
-                    using (StreamWriter sw = new StreamWriter(AppPaths.UsernameConfing))
+                    using (FileStream fs = File.Create(AppPaths.UsernameConfing))
                     {
-                        sw.WriteLine(name);
-                        sw.Close();
+                        byte[] info = new UTF8Encoding(true).GetBytes(name);
                     }
                     return true;
                 }
