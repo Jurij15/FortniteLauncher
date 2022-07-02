@@ -36,7 +36,7 @@
                 </ui:TabItemHelper.Icon>
                 <Grid Height="277">
                     <Label Content="Username" Margin="10,10,391,244"/>
-                    <TextBox x:Name="Username_box" HorizontalAlignment="Center" Margin="0,33,0,0" TextWrapping="Wrap" Text="Player" VerticalAlignment="Top" Width="453"/>
+                    <TextBox x:Name="Username_box" MaxLines="1" HorizontalAlignment="Center" Margin="0,33,0,0" TextWrapping="Wrap" Text="Player" VerticalAlignment="Top" Width="453"/>
                     <Button x:Name="SaveUsernameBtn" Click="SaveUsernameBtn_Click" Content="Save" Margin="295,70,0,0" VerticalAlignment="Top" Width="164"/>
                 </Grid>
             </TabItem>
@@ -54,6 +54,19 @@
                     <TextBlock x:Name="CurrentStatus" HorizontalAlignment="Left" Margin="225,105,0,0" TextWrapping="Wrap" Text="  " VerticalAlignment="Top" Width="198"/>
                     <CheckBox x:Name="IncludedProxyUSE" Checked="IncludedProxyUSE_Checked" Content="Use included Proxy" Margin="30,193,0,0" VerticalAlignment="Top" Width="136"/>
                     <ProgressBar x:Name="LoadProgBar" HorizontalAlignment="Left" Height="26" Margin="134,112,0,0" VerticalAlignment="Top" Width="218"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Raider">
+                <ui:TabItemHelper.Icon>
+                    <ui:SymbolIcon Symbol="XboxOneConsole" />
+                </ui:TabItemHelper.Icon>
+                <Grid Height="275">
+                    <TextBlock HorizontalAlignment="Center" Margin="0,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="128" Width="453"><Run Text="Custom Fortnite gamserver project"/><LineBreak/><Run Text="https://github.com/kem0x/raider3.5"/><LineBreak/><Run/><LineBreak/><Run Language="sl-si" Text="Reqirements:"/><LineBreak/><Run Language="sl-si" Text="- Fortnite build 3.5"/><LineBreak/><Run/></TextBlock>
+                    <Button Content="GitHub" x:Name="RaiderGitHubbtn" Click="RaiderGitHubbtn_Click" Margin="0,143,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Width="453"/>
+                    <Button Content="Discord" Margin="0,180,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Width="453"/>
+                    <Button Content="Download/Update DLL" x:Name="Download_UpdateRaiderBtn" Click="Download_UpdateRaiderBtn_Click" Margin="10,217,0,0" VerticalAlignment="Top" Width="234"/>
+                    <Button Content="Inject DLL" x:Name="InjectRaiderDLL" Click="InjectRaiderDLL_Click" Margin="249,217,0,0" VerticalAlignment="Top" Width="214"/>
+
                 </Grid>
             </TabItem>
             <TabItem Header="About">

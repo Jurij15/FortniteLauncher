@@ -33,7 +33,7 @@ namespace FortniteLauncher.Cores
             }
             catch (Exception ex)
             {
-                return null;
+                return "Error!";
             }
 
             return null;
@@ -42,10 +42,9 @@ namespace FortniteLauncher.Cores
         {
             try
             {
-                File.Create(AppPaths.UsernameConfing);
-                using (StreamWriter sw = new StreamWriter(AppPaths.UsernameConfing))
+                using (StreamWriter sw = File.CreateText(AppPaths.UsernameConfing))
                 {
-                    sw.WriteLine("Player");
+                    sw.Write("Player");
                     sw.Close();
                 }
                 return true;
@@ -66,10 +65,10 @@ namespace FortniteLauncher.Cores
                     {
                         //delete the file
                         File.Delete(AppPaths.UsernameConfing);
-                        File.Delete(AppPaths.UsernameConfing);
-                        using (FileStream fs = File.Create(AppPaths.UsernameConfing))
+                        using (StreamWriter sw = File.CreateText(AppPaths.UsernameConfing))
                         {
-                            byte[] info = new UTF8Encoding(true).GetBytes(name);
+                            sw.Write(name);
+                            sw.Close();
                         }
                         return true;
                     }
@@ -81,17 +80,17 @@ namespace FortniteLauncher.Cores
                 else if (File.Exists(AppPaths.UsernameConfing))
                 {
                     File.Delete(AppPaths.UsernameConfing);
-                    using (FileStream fs = File.Create(AppPaths.UsernameConfing))
+                    using (StreamWriter sw = File.CreateText(AppPaths.UsernameConfing))
                     {
-                        byte[] info = new UTF8Encoding(true).GetBytes(name);
+                        sw.Write(name);
+                        sw.Close();
                     }
                     return true;
                 }
             }
             catch (Exception ex)
             {
-
-                throw;
+                //will do later
             }
             return false;
         }

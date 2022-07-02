@@ -23,6 +23,7 @@ using System.Threading;
 using System.Runtime.InteropServices;
 using ModernWpf;
 using ModernWpf.Controls;
+using FortniteLauncher.Cores.RaiderGameserver;
 
 namespace FortniteLauncher
 {
@@ -38,6 +39,7 @@ namespace FortniteLauncher
         public string path { get; set; }
         public string serverON { get; set; }
         public string ISfsOK { get; set; }
+        public int FNPID { get; set; }
 
         [DllImport("kernel32.dll", EntryPoint = "AllocConsole", SetLastError = true, CharSet = CharSet.Auto, CallingConvention = CallingConvention.StdCall)]
         private static extern int AllocConsole();
@@ -60,6 +62,7 @@ namespace FortniteLauncher
             DarkModeBtn.IsChecked = true;
             PartiesCheckBox.IsChecked = false;
             SeasonImage.Visibility = Visibility.Collapsed;
+            Username_box.Text = Username.UsernameString();
         }
 
         private void ExploreBtn_Click(object sender, RoutedEventArgs e)
@@ -72,6 +75,7 @@ namespace FortniteLauncher
 
         private void LaunchBtn_Click(object sender, RoutedEventArgs e)
         {
+            //this process thing doesnt work properly, i just wont bother to fix it
             Process[] existingprocessmaybe = Process.GetProcessesByName("Fortnite");
             if (existingprocessmaybe.Length == 0)
             {
@@ -95,7 +99,7 @@ namespace FortniteLauncher
                 };
 
                 asyncOutputReader.Start();
-
+                FNPID = FNprocess.Id;
                 InjectSSLbypass.InjectDll(FNprocess.Id, "LauncherData/AuroraNative.dll");
             }
             else
@@ -284,6 +288,43 @@ namespace FortniteLauncher
                 proxywarningdialog.CloseButtonText = "OK";
                 proxywarningdialog.ShowAsync();
             }
+        }
+
+        private void RaiderGitHubbtn_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                //from https://iqcode.com/code/csharp/c-open-web-page-in-default-browser
+
+                var uri = "https://github.com/kem0x/raider3.5";
+                var psi = new System.Diagnostics.ProcessStartInfo();
+                psi.UseShellExecute = true;
+                psi.FileName = uri;
+                System.Diagnostics.Process.Start(psi);
+            }
+            catch (Exception ex)
+            {
+                System.Windows.MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void Download_UpdateRaiderBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Download_UpdateDLL dll = new Download_UpdateDLL();
+            dll.DownloadDLL();
+        }
+
+        private void InjectRaiderDLL_Click(object sender, RoutedEventArgs e)
+        {
+            ContentDialog proxywarningdialog = new ContentDialog();
+            proxywarningdialog.Title = "Before injecting";
+            proxywarningdialog.Content = "Make sure you are in the lobby on Fortnite build 3.5 before clicking OK!";
+            proxywarningdialog.CloseButtonText = "OK";
+            proxywarningdialog.ShowAsync();
+
+            //will just reuse the ssl bypass injection, it does the same thing as this
+            InjectSSLbypass.InjectDll(FNPID, "LauncherData/RaiderGameserver/Raider.dll"/*AppPaths.RaiderDeleteDLLLocation/*lol*/);
+            System.Windows.MessageBox.Show("Injection done?");
         }
     }
 }
