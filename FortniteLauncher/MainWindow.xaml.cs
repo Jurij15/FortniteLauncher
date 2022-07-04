@@ -39,7 +39,7 @@ namespace FortniteLauncher
         public string path { get; set; }
         public string serverON { get; set; }
         public string ISfsOK { get; set; }
-        public int FNPID { get; set; }
+        public int FNPID;
 
         [DllImport("kernel32.dll", EntryPoint = "AllocConsole", SetLastError = true, CharSet = CharSet.Auto, CallingConvention = CallingConvention.StdCall)]
         private static extern int AllocConsole();
@@ -316,15 +316,17 @@ namespace FortniteLauncher
 
         private void InjectRaiderDLL_Click(object sender, RoutedEventArgs e)
         {
+            /*
+            System.Windows.MessageBox.Show(FNPID.ToString());
             ContentDialog proxywarningdialog = new ContentDialog();
             proxywarningdialog.Title = "Before injecting";
             proxywarningdialog.Content = "Make sure you are in the lobby on Fortnite build 3.5 before clicking OK!";
             proxywarningdialog.CloseButtonText = "OK";
             proxywarningdialog.ShowAsync();
 
-            //will just reuse the ssl bypass injection, it does the same thing as this
-            InjectSSLbypass.InjectDll(FNPID, "LauncherData/RaiderGameserver/Raider.dll"/*AppPaths.RaiderDeleteDLLLocation/*lol*/);
+            InjectRaider.InjectDll(FNPID, "LauncherData/RaiderGameserver/Raider.dll");
             System.Windows.MessageBox.Show("Injection done?");
+            */
         }
     }
 }

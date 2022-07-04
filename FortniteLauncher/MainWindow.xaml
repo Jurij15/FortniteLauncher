@@ -61,11 +61,14 @@
                     <ui:SymbolIcon Symbol="XboxOneConsole" />
                 </ui:TabItemHelper.Icon>
                 <Grid Height="275">
-                    <TextBlock HorizontalAlignment="Center" Margin="0,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="128" Width="453"><Run Text="Custom Fortnite gamserver project"/><LineBreak/><Run Text="https://github.com/kem0x/raider3.5"/><LineBreak/><Run/><LineBreak/><Run Language="sl-si" Text="Reqirements:"/><LineBreak/><Run Language="sl-si" Text="- Fortnite build 3.5"/><LineBreak/><Run/></TextBlock>
-                    <Button Content="GitHub" x:Name="RaiderGitHubbtn" Click="RaiderGitHubbtn_Click" Margin="0,143,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Width="453"/>
-                    <Button Content="Discord" Margin="0,180,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Width="453"/>
-                    <Button Content="Download/Update DLL" x:Name="Download_UpdateRaiderBtn" Click="Download_UpdateRaiderBtn_Click" Margin="10,217,0,0" VerticalAlignment="Top" Width="234"/>
-                    <Button Content="Inject DLL" x:Name="InjectRaiderDLL" Click="InjectRaiderDLL_Click" Margin="249,217,0,0" VerticalAlignment="Top" Width="214"/>
+                    <TextBlock HorizontalAlignment="Center" Margin="0,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="97" Width="453"><Run Text="Custom Fortnite gamserver project"/><LineBreak/><Run Text="https://github.com/kem0x/raider3.5"/><LineBreak/><Run/><LineBreak/><Run Language="sl-si" Text="Reqirements:"/><LineBreak/><Run Language="sl-si" Text="- Fortnite build 3.5"/><LineBreak/><Run/></TextBlock>
+                    <Button Content="GitHub" x:Name="RaiderGitHubbtn" Click="RaiderGitHubbtn_Click" Margin="10,116,0,0" Width="226" Height="32" VerticalAlignment="Top"/>
+                    <Button Content="Discord" Margin="241,116,0,0" VerticalAlignment="Top" Width="222"/>
+                    <Button Content="Download/Update DLL" x:Name="Download_UpdateRaiderBtn" Click="Download_UpdateRaiderBtn_Click" Margin="10,196,0,0" VerticalAlignment="Top" Width="234"/>
+                    <Button Content="Start Fortnite" x:Name="InjectRaiderDLL" Click="InjectRaiderDLL_Click" Margin="249,196,0,0" VerticalAlignment="Top" Width="214"/>
+                    <TextBox HorizontalAlignment="Left" Margin="127,153,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="229"/>
+                    <Label Content="Path to build 3.5" HorizontalAlignment="Left" Margin="10,154,0,0" VerticalAlignment="Top" Height="31" Width="112"/>
+                    <Button Content="Explore" Margin="361,153,0,0" VerticalAlignment="Top" Width="102"/>
 
                 </Grid>
             </TabItem>
