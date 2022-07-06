@@ -24,6 +24,7 @@ using System.Runtime.InteropServices;
 using ModernWpf;
 using ModernWpf.Controls;
 using FortniteLauncher.Cores.RaiderGameserver;
+using System.IO;
 
 namespace FortniteLauncher
 {
@@ -37,7 +38,7 @@ namespace FortniteLauncher
         /// </summary>
         public string DefaultFNPath = "/FortniteGame/Binaries/Win64/FortniteClient-Win64-Shipping.exe";
         public string path { get; set; }
-        public string serverON { get; set; }
+        public bool serverOn = false;
         public string ISfsOK { get; set; }
         public int FNPID;
 
@@ -314,19 +315,41 @@ namespace FortniteLauncher
             dll.DownloadDLL();
         }
 
+        //the button is called start fortnite, i just didnt change it
         private void InjectRaiderDLL_Click(object sender, RoutedEventArgs e)
         {
-            /*
-            System.Windows.MessageBox.Show(FNPID.ToString());
-            ContentDialog proxywarningdialog = new ContentDialog();
-            proxywarningdialog.Title = "Before injecting";
-            proxywarningdialog.Content = "Make sure you are in the lobby on Fortnite build 3.5 before clicking OK!";
-            proxywarningdialog.CloseButtonText = "OK";
-            proxywarningdialog.ShowAsync();
+            //System.Windows.MessageBox.Show(Username.UsernameString());
+            LaunchFortnite.Launch(Box3_5.Text, Username.UsernameString(), false, false, false, false, false);
+        }
 
-            InjectRaider.InjectDll(FNPID, "LauncherData/RaiderGameserver/Raider.dll");
-            System.Windows.MessageBox.Show("Injection done?");
-            */
+        private void RaiderExplore3_5btn_Click(object sender, RoutedEventArgs e)
+        {
+            System.Windows.Forms.FolderBrowserDialog folderBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
+            folderBrowserDialog.ShowDialog();
+            path = folderBrowserDialog.SelectedPath;
+            Box3_5.Text = folderBrowserDialog.SelectedPath;
+        }
+
+        private void InjectRaiderDLLBtn_Click(object sender, RoutedEventArgs e)
+        {
+            //will just reuse the ssl inject
+            if (!File.Exists(AppPaths.RaiderDeleteDLLLocation))
+            {
+                ContentDialog proxywarningdialog = new ContentDialog();
+                proxywarningdialog.Title = "Raider not found!";
+                proxywarningdialog.Content = "Try clicking Install/Update DLL";
+                proxywarningdialog.CloseButtonText = "OK";
+                proxywarningdialog.ShowAsync();
+            }
+            else if (File.Exists(AppPaths.RaiderDeleteDLLLocation))
+            {
+                InjectSSLbypass.InjectDll(FNPID, AppPaths.RaiderDeleteDLLLocation); 
+                ContentDialog proxywarningdialog = new ContentDialog();
+                proxywarningdialog.Title = "Success!";
+                proxywarningdialog.Content = "Raider injected!";
+                proxywarningdialog.CloseButtonText = "OK";
+                proxywarningdialog.ShowAsync();
+            }
         }
     }
 }

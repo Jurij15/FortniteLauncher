@@ -19,12 +19,12 @@ namespace FortniteLauncher.Cores
             if (processes.Length == 0)
             {
 
-                main.serverON = "false";
+                main.serverOn=false;
             }
             else
             {
 
-                main.serverON = "true";
+                main.serverOn=true;
             }
         }
     }
