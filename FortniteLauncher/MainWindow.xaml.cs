@@ -52,7 +52,7 @@ namespace FortniteLauncher
             if (Version.VersionFull.Contains("Preview"))
             {
                 TestingWelcome t = new TestingWelcome();
-                //t.ShowDialog();
+                t.ShowDialog();
                 testingmessageblock.Visibility = Visibility.Visible;
             }
             else if (!Version.VersionFull.Contains("Preview"))

@@ -14,9 +14,9 @@ namespace FortniteLauncher.Cores
         {
             Process FNprocess = new Process();
             string fullpath = path + "/FortniteGame/Binaries/Win64/FortniteClient-Win64-Shipping.exe";
-            FNprocess.StartInfo.Arguments = $"-epicapp=Fortnite -AUTH_LOGIN=unused -epicusername={username} -AUTH_PASSWORD=password -epicenv=Prod -epicportal -epiclocale=en-us -skippatchcheck -NOSSLPINNING -FORCECONSOLE";
+            FNprocess.StartInfo.Arguments = $"-epicapp=Fortnite -AUTH-TYPE=externalauthtoken -AUTH_LOGIN={username} -epicusername={username} -AUTH_PASSWORD=password -epicenv=Prod -epicportal -epiclocale=en-us -skippatchcheck -NOSSLPINNING -FORCECONSOLE";
             FNprocess.StartInfo.FileName = fullpath;
-            FNprocess.StartInfo.UseShellExecute = false;
+            FNprocess.StartInfo.UseShellExecute = true;
             FNprocess.StartInfo.RedirectStandardOutput = true;
             //System.Windows.MessageBox.Show(fullpath);
             FNprocess.Start();
