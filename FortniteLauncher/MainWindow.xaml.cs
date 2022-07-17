@@ -64,6 +64,8 @@ namespace FortniteLauncher
             PartiesCheckBox.IsChecked = false;
             SeasonImage.Visibility = Visibility.Collapsed;
             Username_box.Text = Username.UsernameString();
+            //show or hide the player tab (until i get it working
+            PlayerTab.Visibility = Visibility.Collapsed;
         }
 
         private void ExploreBtn_Click(object sender, RoutedEventArgs e)
@@ -77,6 +79,7 @@ namespace FortniteLauncher
         private void LaunchBtn_Click(object sender, RoutedEventArgs e)
         {
             //this process thing doesnt work properly, i just wont bother to fix it
+            /*
             Process[] existingprocessmaybe = Process.GetProcessesByName("Fortnite");
             if (existingprocessmaybe.Length == 0)
             {
@@ -110,6 +113,24 @@ namespace FortniteLauncher
                 dialog.Content = "Please Close fortnite and try again!";
                 dialog.CloseButtonText = "OK";
                 dialog.ShowAsync();
+            }
+            */
+            //moved to launchfortnite.cs
+            if (SuspendBECheckBox.IsChecked == true && SuspendEACCheckBox.IsChecked == true)
+            {
+                LaunchFortnite.Launch(PathBOx.Text, null, true, false, true, true, true);
+            }
+            else if (SuspendBECheckBox.IsChecked == true)
+            {
+                LaunchFortnite.Launch(PathBOx.Text, null, true, false, true, true, false);
+            }
+            else if (SuspendEACCheckBox.IsChecked == true)
+            {
+                LaunchFortnite.Launch(PathBOx.Text, null, true, false, true, false, true);
+            }
+            else
+            {
+                LaunchFortnite.Launch(PathBOx.Text, null, true, false, true, false, false);
             }
         }
 
