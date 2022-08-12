@@ -118,19 +118,19 @@ namespace FortniteLauncher
             //moved to launchfortnite.cs
             if (SuspendBECheckBox.IsChecked == true && SuspendEACCheckBox.IsChecked == true)
             {
-                LaunchFortnite.Launch(PathBOx.Text, null, true, false, true, true, true);
+                LaunchFortnite.Launch(PathBOx.Text, Username_box.Text, true, false, true, true, true);
             }
             else if (SuspendBECheckBox.IsChecked == true)
             {
-                LaunchFortnite.Launch(PathBOx.Text, null, true, false, true, true, false);
+                LaunchFortnite.Launch(PathBOx.Text, Username_box.Text, true, false, true, true, false);
             }
             else if (SuspendEACCheckBox.IsChecked == true)
             {
-                LaunchFortnite.Launch(PathBOx.Text, null, true, false, true, false, true);
+                LaunchFortnite.Launch(PathBOx.Text, Username_box.Text, true, false, true, false, true);
             }
             else
             {
-                LaunchFortnite.Launch(PathBOx.Text, null, true, false, true, false, false);
+                LaunchFortnite.Launch(PathBOx.Text, Username_box.Text, true, false, true, false, false);
             }
         }
 

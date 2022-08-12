@@ -18,12 +18,13 @@ namespace FortniteLauncher.Cores
             string shipping = "/FortniteGame/Binaries/Win64/FortniteClient-Win64-Shipping.exe";
             string be = path + "/FortniteGame/Binaries/Win64/FortniteClient-Win64-Shipping_BE.exe";
             string eac = path + "/FortniteGame/Binaries/Win64/FortniteClient-Win64-Shipping_EAC.exe";
-            string arguments = $"-epicapp=Fortnite -noeac -nobe -AUTH-TYPE=externalauthtoken -AUTH_LOGIN={username} -epicusername={username} -AUTH_PASSWORD=password -epicenv=Prod -epicportal -epiclocale=en-us -skippatchcheck -NOSSLPINNING -FORCECONSOLE";
+            //string arguments = $"-epicapp=Fortnite -noeac -nobe -AUTH-TYPE=externalauthtoken -AUTH_LOGIN={username} -epicusername={username} -AUTH_PASSWORD=password -epicenv=Prod -epicportal -epiclocale=en-us -skippatchcheck -NOSSLPINNING -FORCECONSOLE";
+            string newArguments = $"-skippatchcheck -epicportal -AUTH_TYPE=epic -epicapp=Fortnite -noeac -nobe -AUTH_LOGIN={username}@fortnite.com -AUTH_PASSWORD=unused -fromfl=be -fltoken=db04e37196g0h6h8e003c19d";
             Process FNprocess = new Process();
             string fullpath = path + shipping;
-            FNprocess.StartInfo.Arguments = $"-epicapp=Fortnite -AUTH-TYPE=externalauthtoken -AUTH_LOGIN={username} -epicusername={username} -AUTH_PASSWORD=password -epicenv=Prod -epicportal -epiclocale=en-us -skippatchcheck -NOSSLPINNING -FORCECONSOLE";
+            FNprocess.StartInfo.Arguments = newArguments;
             FNprocess.StartInfo.FileName = fullpath;
-            FNprocess.StartInfo.UseShellExecute = true;
+            FNprocess.StartInfo.UseShellExecute = false;
             FNprocess.StartInfo.RedirectStandardOutput = true;
             //System.Windows.MessageBox.Show(fullpath);
             FNprocess.Start();

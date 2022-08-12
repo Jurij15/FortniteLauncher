@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32319.34
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FortniteLauncher", "FortniteLauncher\FortniteLauncher.csproj", "{0E24777F-0F8C-4954-8F35-20CE5FDEA451}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FortniteLauncher", "FortniteLauncher\FortniteLauncher.csproj", "{0E24777F-0F8C-4954-8F35-20CE5FDEA451}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FortniteLauncher.Common", "FortniteLauncher.Common\FortniteLauncher.Common.csproj", "{EB025B62-4B79-400C-A5D0-216BCB9A9F83}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{0E24777F-0F8C-4954-8F35-20CE5FDEA451}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E24777F-0F8C-4954-8F35-20CE5FDEA451}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E24777F-0F8C-4954-8F35-20CE5FDEA451}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB025B62-4B79-400C-A5D0-216BCB9A9F83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB025B62-4B79-400C-A5D0-216BCB9A9F83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB025B62-4B79-400C-A5D0-216BCB9A9F83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB025B62-4B79-400C-A5D0-216BCB9A9F83}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
