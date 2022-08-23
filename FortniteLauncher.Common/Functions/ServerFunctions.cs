@@ -108,6 +108,22 @@ namespace FortniteLauncher.Common.Functions
             cmd.Start();
         }
 
+        public static void Start()
+        {
+            if (!Directory.Exists("LauncherData/LawinServer/LawinServer-main"))
+            {
+                dialog.ShowDialog("Error", "LawinServer is not installed!", "OK");
+            }
+            else if (Directory.Exists("LauncherData/LawinServer/LawinServer-main"))
+            {
+                Process p = new Process();
+                p.StartInfo.FileName = "cmd.exe";
+                p.StartInfo.Arguments = "/C cd LauncherData/LawinServer/LawinServer-main && start.bat";
+                p.StartInfo.Verb = "runas";
+                p.Start();
+            }
+        }
+
         static void wc_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
         {
 

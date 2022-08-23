@@ -79,6 +79,7 @@
     <Compile Include="Cores\InjectSSLbypass.cs" />
     <Compile Include="Cores\Win32.cs" />
     <Compile Include="dialog.cs" />
+    <Compile Include="Functions\ConsoleFunctions.cs" />
     <Compile Include="Functions\FortniteFunctions.cs" />
     <Compile Include="Functions\RaiderFunctions.cs" />
     <Compile Include="Functions\ServerFunctions.cs" />
