@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FortniteLauncher.Common.Functions
 {
-    internal class RaiderFunctions
+    public class RaiderFunctions
     {
     }
 }

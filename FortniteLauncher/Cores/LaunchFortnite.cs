@@ -19,7 +19,8 @@ namespace FortniteLauncher.Cores
             string be = path + "/FortniteGame/Binaries/Win64/FortniteClient-Win64-Shipping_BE.exe";
             string eac = path + "/FortniteGame/Binaries/Win64/FortniteClient-Win64-Shipping_EAC.exe";
             //string arguments = $"-epicapp=Fortnite -noeac -nobe -AUTH-TYPE=externalauthtoken -AUTH_LOGIN={username} -epicusername={username} -AUTH_PASSWORD=password -epicenv=Prod -epicportal -epiclocale=en-us -skippatchcheck -NOSSLPINNING -FORCECONSOLE";
-            string newArguments = $"-skippatchcheck -epicportal -AUTH_TYPE=epic -epicapp=Fortnite -noeac -nobe -AUTH_LOGIN={username}@fortnite.com -AUTH_PASSWORD=unused -fromfl=be -fltoken=db04e37196g0h6h8e003c19d";
+            string newArguments = $"-log -epicapp=Fortnite -epicenv=Prod -epiclocale=en-us -epicportal -skippatchcheck -nobe -fromfl=eac -fltoken=3db3ba5dcbd2e16703f3978d -AUTH_LOGIN={username}@fortnite.com -AUTH_PASSWORD=FortniteLauncher -AUTH_TYPE=epic";
+            string testArguments = "-epicapp=Fortnite -epicenv=Prod -epicportal -epiclocale=en-us -skippatchcheck -HTTP=WinInet -NOSSLPINNING -noeac -nobe -fltoken=none -NoCodeGuards";
             Process FNprocess = new Process();
             string fullpath = path + shipping;
             FNprocess.StartInfo.Arguments = newArguments;

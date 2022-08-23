@@ -1,30 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using System.Windows.Forms;
-using Microsoft.Win32;
-using Microsoft.Windows;
-using System.Drawing;
-using System.Diagnostics;
-using FortniteLauncher.Cores;
+﻿using FortniteLauncher.Cores;
+using FortniteLauncher.Cores.RaiderGameserver;
 using FortniteLauncher.Server;
-using System.Threading;
-using System.Runtime.InteropServices;
 using ModernWpf;
 using ModernWpf.Controls;
-using FortniteLauncher.Cores.RaiderGameserver;
+using System;
+using System.Diagnostics;
+using System.Drawing;
 using System.IO;
+using System.Runtime.InteropServices;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 
 namespace FortniteLauncher
 {
@@ -364,7 +351,7 @@ namespace FortniteLauncher
             }
             else if (File.Exists(AppPaths.RaiderDeleteDLLLocation))
             {
-                InjectSSLbypass.InjectDll(FNPID, AppPaths.RaiderDeleteDLLLocation); 
+                InjectSSLbypass.InjectDll(FNPID, AppPaths.RaiderDeleteDLLLocation);
                 ContentDialog proxywarningdialog = new ContentDialog();
                 proxywarningdialog.Title = "Success!";
                 proxywarningdialog.Content = "Raider injected!";
