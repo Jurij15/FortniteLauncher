@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using FortniteLauncher.Common;
 
 namespace FortniteLauncher.NewUI
 {
@@ -20,9 +21,18 @@ namespace FortniteLauncher.NewUI
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static void OnStartup()
+        {
+            if (Version.VersionString.Contains("debug")) //if version contains debug, console is enabled by default
+            {
+                Common.Global.SetupConsole();
+                LogSharper.LogSharper.Setup(true);
+            }
+        }
         public MainWindow()
         {
             InitializeComponent();
+            OnStartup();
         }
     }
 }

@@ -8,6 +8,9 @@ namespace FortniteLauncher.Common.Functions
 {
     public class ConsoleFunctions
     {
-         
+        public static void InjectConsole()
+        {
+
+        }
     }
 }

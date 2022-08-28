@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:FortniteLauncher.NewUI"
         xmlns:ui="http://schemas.modernwpf.com/2019"
         mc:Ignorable="d"
-        Title="FortniteLauncher" Height="550" Width="970" ResizeMode="CanMinimize"
+        Title="FortniteLauncher" Height="467" Width="793" ResizeMode="CanMinimize"
          ui:WindowHelper.UseModernWindowStyle="True">
     <!-- Window content here -->
     <Grid>
@@ -15,7 +15,11 @@
                 <Grid>
                     <Image HorizontalAlignment="Left" Height="179" Margin="10,10,0,0" VerticalAlignment="Top" Width="187"/>
                     <Label Content="Fortnite Path:" FontSize="18" HorizontalAlignment="Left" Margin="205,10,0,0" VerticalAlignment="Top" Height="25" Width="109"/>
-                    <TextBox HorizontalAlignment="Left" x:Name="FortnitePathBox" Margin="319,7,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="569"/>
+                    <TextBox HorizontalAlignment="Left" x:Name="FortnitePathBox" Margin="319,7,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="392"/>
+                    <CheckBox Content="Use Platanium SSL Bypass" Margin="10,204,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="Suspend BE" Margin="202,204,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="Suspend EAC" Margin="327,204,0,0" VerticalAlignment="Top"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="10,241,0,0" TextWrapping="Wrap" Text="DynamicTextBox" VerticalAlignment="Top" Height="156" Width="437"/>
 
                 </Grid>
             </TabItem>
@@ -35,6 +39,6 @@
 
             </TabItem>
         </TabControl>
-        <Rectangle Fill="DarkGray" HorizontalAlignment="Center" Height="44" Stroke="Black" VerticalAlignment="Top" Width="970"/>
+        <Rectangle Fill="#FF3C3C3C" HorizontalAlignment="Center" Height="44" Stroke="Black" VerticalAlignment="Top" Width="794"/>
     </Grid>
 </Window>

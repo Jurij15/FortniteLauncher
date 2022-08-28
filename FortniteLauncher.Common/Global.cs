@@ -6,14 +6,19 @@ using System.Threading.Tasks;
 using System.IO;
 using System.IO.Compression;
 using FortniteLauncher.Common.Functions;
+using System.Runtime.InteropServices;
 
 namespace FortniteLauncher.Common
 {
     public class Global
     {
+        [DllImport("kernel32.dll", EntryPoint = "AllocConsole", SetLastError = true, CharSet = CharSet.Auto, CallingConvention = CallingConvention.StdCall)]
+        private static extern int AllocConsole();
         public static int FNPID;
         public static bool EnableLogging = true;
 
+        public static bool HasStartedLawinServer = false;
+        public static int LawinServerPID;
         public static string Status = null;
 
         public static bool ExtractZIP(string ZIPpath, string extractPath)
@@ -37,6 +42,11 @@ namespace FortniteLauncher.Common
         public static string GetCurrentStatus()
         {
             return Status;
+        }
+
+        public static void SetupConsole()
+        {
+            AllocConsole();
         }
 
         public static ServerFunctions server;

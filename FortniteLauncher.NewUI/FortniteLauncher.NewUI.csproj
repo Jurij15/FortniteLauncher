@@ -13,4 +13,8 @@
     <PackageReference Include="ModernWpfUI.MahApps" Version="0.9.5" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\FortniteLauncher.Common\FortniteLauncher.Common.csproj" />
+  </ItemGroup>
+
 </Project>
