@@ -49,7 +49,7 @@ namespace FortniteLauncher.Cores
                 else if (usePlatanium == false)
                 {
                     //InjectSSLbypass.InjectDll(FNprocess.Id, "LauncherData/AuroraNative.dll");
-                    InjectSSLbypass.InjectDll(FNprocess.Id, "LauncherData/Platanium.dll");
+                    InjectSSLbypass.InjectDll(FNprocess.Id, "LauncherData/Cranium.dll");
                 }
             }
             if (suspendEAC)

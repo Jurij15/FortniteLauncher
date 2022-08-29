@@ -3,7 +3,7 @@
 #include "url.h"
 
 // Pick your poison
-#define URL_HOST "127.0.0.1:3551"
+#define URL_HOST "localhost"
 //#define URL_HOST "aurorafn.dev"
 
 #define LOG_URLS
@@ -48,15 +48,26 @@ CURLcode curl_easy_setopt_detour(struct Curl_easy* data, CURLoption tag, ...) {
     }
 #ifdef URL_HOST
     else if (tag == CURLOPT_URL) {
+        /*
         std::string url = va_arg(arg, char*);
         size_t length = url.length();
 
         Uri uri = Uri::Parse(url);
         if (uri.Host.ends_with(".ol.epicgames.com")) {
-            url = Uri::CreateUri(uri.Protocol, URL_HOST, "3551", "localhost:", uri.QueryString);
+            url = Uri::CreateUri("http", URL_HOST, "3551", "localhost", uri.QueryString);
         }
         if (url.length() < length) {
             url.append(length - url.length(), ' '); // buffer size checking can occur
+        }
+        */
+        std::string url = va_arg(arg, char*);
+        size_t length = url.length();
+        Uri uri = Uri::Parse(url);
+
+        if (uri.Host.ends_with(("ol.epicgames.com")) || uri.Host.ends_with((".akamaized.net")) || uri.Host.ends_with(("on.epicgames.com")))
+        {
+            //printf("LogURL: %s\n", url.c_str());
+            url = Uri::CreateUri("http", URL_HOST, "3551", uri.Path, uri.QueryString);
         }
 
 #ifdef LOG_URLS
