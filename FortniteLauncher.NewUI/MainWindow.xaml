@@ -11,31 +11,38 @@
     <!-- Window content here -->
     <Grid>
         <TabControl TabStripPlacement="Left" Margin="0,44,0,0">
-            <TabItem Header="Play">
+            <TabItem Header="Play" x:Name="PlayTab">
                 <Grid>
-                    <Image HorizontalAlignment="Left" Height="179" Margin="10,10,0,0" VerticalAlignment="Top" Width="187"/>
+                    <Image x:Name="FortniteSplashImage" HorizontalAlignment="Left" Height="192" Margin="10,7,0,0" VerticalAlignment="Top" Width="191"/>
                     <Label Content="Fortnite Path:" FontSize="18" HorizontalAlignment="Left" Margin="205,10,0,0" VerticalAlignment="Top" Height="25" Width="109"/>
-                    <TextBox HorizontalAlignment="Left" x:Name="FortnitePathBox" Margin="319,7,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="392"/>
-                    <CheckBox Content="Use Platanium SSL Bypass" Margin="10,204,0,0" VerticalAlignment="Top"/>
-                    <CheckBox Content="Suspend BE" Margin="202,204,0,0" VerticalAlignment="Top"/>
-                    <CheckBox Content="Suspend EAC" Margin="327,204,0,0" VerticalAlignment="Top"/>
-                    <TextBlock HorizontalAlignment="Left" Margin="10,241,0,0" TextWrapping="Wrap" Text="DynamicTextBox" VerticalAlignment="Top" Height="156" Width="437"/>
+                    <TextBox TextChanged="FortnitePathBox_TextChanged" HorizontalAlignment="Left" x:Name="FortnitePathBox" IsReadOnly="True" Margin="319,7,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="392"/>
+                    <CheckBox Content="Use Platanium SSL Bypass" Margin="2,349,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="Suspend BE" Margin="194,349,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="Suspend EAC" Margin="319,349,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="DynamicInfoTextBox" HorizontalAlignment="Left" Margin="10,213,0,0" TextWrapping="Wrap" Text="InfoDynamicTextBox" VerticalAlignment="Top" Height="131" Width="690"/>
+                    <Button Style="{StaticResource AccentButtonStyle}" Content="LAUNCH" Margin="444,349,0,0" VerticalAlignment="Top" Width="256"/>
+                    <Button x:Name="ExploreBtn" Click="ExploreBtn_Click" Content="Open" Margin="583,44,0,0" VerticalAlignment="Top" Width="128"/>
 
                 </Grid>
             </TabItem>
-            <TabItem Header="Player">
+            <TabItem Header="Player" x:Name="PlayerTab">
+                <Grid>
+                    <Label FontSize="28" Content="Username" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="38" Width="133"/>
+                    <TextBox x:Name="UsernameBox" HorizontalAlignment="Center" Margin="0,53,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="701"/>
+                    <Button Style="{StaticResource AccentButtonStyle}" Content="Save" Margin="496,90,0,0" VerticalAlignment="Top" Width="215"/>
+
+                </Grid>
+            </TabItem>
+            <TabItem Header="Server" x:Name="ServerTab">
 
             </TabItem>
-            <TabItem Header="Server">
+            <TabItem Header="Inject" x:Name="InjectTab">
 
             </TabItem>
-            <TabItem Header="Console">
+            <TabItem Header="Raider" x:Name="RaiderTab">
 
             </TabItem>
-            <TabItem Header="Raider">
-
-            </TabItem>
-            <TabItem Header="About">
+            <TabItem Header="About" x:Name="AboutTab">
 
             </TabItem>
         </TabControl>

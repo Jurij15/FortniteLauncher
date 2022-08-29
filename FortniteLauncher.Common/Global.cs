@@ -17,6 +17,8 @@ namespace FortniteLauncher.Common
         public static int FNPID;
         public static bool EnableLogging = true;
 
+        public static string FortnitePath;
+
         public static bool HasStartedLawinServer = false;
         public static int LawinServerPID;
         public static string Status = null;
@@ -52,5 +54,8 @@ namespace FortniteLauncher.Common
         public static ServerFunctions server;
         public static FortniteFunctions fortnite;
         public static RaiderFunctions raider;
+        public static ConsoleFunctions console;
+        public static ConfigsFunctions configs;
+        public static ConfigsFunctions.UsernameFunctions username;
     }
 }

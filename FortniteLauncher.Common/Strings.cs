@@ -26,5 +26,12 @@ namespace FortniteLauncher.Common
 
         //lawinserver git string
         public static string LawinGit = "https://github.com/Lawin0129/LawinServer/archive/refs/heads/main.zip";
+
+        //some other fortnite paths
+        public static string SplashScreenImage = "/FortniteGame/Content/Splash/Splash.bmp";
+
+
+        //gui text strings
+        public static string LawinServerNotStartedWarning = "[WARNING]LawinServer was not started by the launcher!";
     }
 }
