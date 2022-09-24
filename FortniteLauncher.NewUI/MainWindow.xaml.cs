@@ -32,7 +32,7 @@ namespace FortniteLauncher.NewUI
         public ConsoleFunctions console;
         public ConfigsFunctions configs;
         public ConfigsFunctions.UsernameFunctions username;
-        public void InsertNewFortniteTabInfo(string text)
+        public void InsertNewLineIntoFortniteTabInfo(string text)
         {
             string currenttext = DynamicInfoTextBox.Text;
             if (currenttext=="")
@@ -58,7 +58,7 @@ namespace FortniteLauncher.NewUI
             if (!Global.HasStartedLawinServer)
             {
                 Logger.Warning("LawinServer was not started by the launcher!");
-                InsertNewFortniteTabInfo(Strings.LawinServerNotStartedWarning);
+                InsertNewLineIntoFortniteTabInfo(Strings.LawinServerNotStartedWarning);
             }
 
             if (ConfigsFunctions.UsernameFunctions.UsernameString() == "")
@@ -67,7 +67,9 @@ namespace FortniteLauncher.NewUI
             }
 
             UsernameBox.Text = ConfigsFunctions.UsernameFunctions.UsernameString();
+            Global.Username = ConfigsFunctions.UsernameFunctions.UsernameString();
             Logger.Info("Set username!");
+            Logger.Info(Global.Username);
         }
         public MainWindow()
         {
@@ -95,6 +97,17 @@ namespace FortniteLauncher.NewUI
                Bitmap bitmap = new Bitmap(bmp);
                FortniteSplashImage.Source = new BitmapImage(new Uri(bmp));
             }
+        }
+
+        private void LaunchBtn_Click(object sender, RoutedEventArgs e)
+        {
+            FortniteFunctions.LaunchFortnite(FortnitePathBox.Text,Global.Username, true, false, false, false, false);
+            InsertNewLineIntoFortniteTabInfo("[INFO]Fortnite was launched!");
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            Environment.Exit(0);
         }
     }
 }

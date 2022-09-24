@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:FortniteLauncher.NewUI"
+        xmlns:local="clr-namespace:FortniteLauncher.NewUI" Closing="Window_Closing"
         xmlns:ui="http://schemas.modernwpf.com/2019"
         mc:Ignorable="d"
         Title="FortniteLauncher" Height="467" Width="793" ResizeMode="CanMinimize"
@@ -19,8 +19,8 @@
                     <CheckBox Content="Use Platanium SSL Bypass" Margin="2,349,0,0" VerticalAlignment="Top"/>
                     <CheckBox Content="Suspend BE" Margin="194,349,0,0" VerticalAlignment="Top"/>
                     <CheckBox Content="Suspend EAC" Margin="319,349,0,0" VerticalAlignment="Top"/>
-                    <TextBox x:Name="DynamicInfoTextBox" HorizontalAlignment="Left" Margin="10,213,0,0" TextWrapping="Wrap" Text="InfoDynamicTextBox" VerticalAlignment="Top" Height="131" Width="690"/>
-                    <Button Style="{StaticResource AccentButtonStyle}" Content="LAUNCH" Margin="444,349,0,0" VerticalAlignment="Top" Width="256"/>
+                    <TextBox IsReadOnly="True" x:Name="DynamicInfoTextBox" HorizontalAlignment="Left" Margin="10,213,0,0" TextWrapping="Wrap" Text="InfoDynamicTextBox" VerticalAlignment="Top" Height="131" Width="690"/>
+                    <Button Style="{StaticResource AccentButtonStyle}" Content="LAUNCH" Margin="444,349,0,0" x:Name="LaunchBtn" Click="LaunchBtn_Click" VerticalAlignment="Top" Width="256"/>
                     <Button x:Name="ExploreBtn" Click="ExploreBtn_Click" Content="Open" Margin="583,44,0,0" VerticalAlignment="Top" Width="128"/>
 
                 </Grid>

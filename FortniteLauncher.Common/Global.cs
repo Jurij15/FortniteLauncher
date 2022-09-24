@@ -18,6 +18,7 @@ namespace FortniteLauncher.Common
         public static bool EnableLogging = true;
 
         public static string FortnitePath;
+        public static string Username { get; set; }
 
         public static bool HasStartedLawinServer = false;
         public static int LawinServerPID;

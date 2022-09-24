@@ -19,7 +19,8 @@ namespace FortniteLauncher.Common.Functions
             string be = path + "/FortniteGame/Binaries/Win64/FortniteClient-Win64-Shipping_BE.exe";
             string eac = path + "/FortniteGame/Binaries/Win64/FortniteClient-Win64-Shipping_EAC.exe";
             //string arguments = $"-epicapp=Fortnite -noeac -nobe -AUTH-TYPE=externalauthtoken -AUTH_LOGIN={username} -epicusername={username} -AUTH_PASSWORD=password -epicenv=Prod -epicportal -epiclocale=en-us -skippatchcheck -NOSSLPINNING -FORCECONSOLE";
-            string newArguments = $"-log -epicapp=Fortnite -epicenv=Prod -epiclocale=en-us -epicportal -skippatchcheck -nobe -fromfl=eac -fltoken=3db3ba5dcbd2e16703f3978d -AUTH_LOGIN={username}@fortnite.com -AUTH_PASSWORD=FortniteLauncher -AUTH_TYPE=epic";
+            string newArguments = $"-epicapp=Fortnite -epicenv=Prod -epicportal -epiclocale=en-us -skippatchcheck -HTTP=WinInet -NOSSLPINNING -noeac -nobe -NoCodeGuards -AUTH_TYPE=epic -AUTH_LOGIN={username} -AUTH_PASSWORD=unused";
+            string testargs = $"-epicapp=Fortnite -epicenv=Prod -epicportal -epiclocale=en-us -skippatchcheck -HTTP=WinInet -NOSSLPINNING -noeac -nobe -log -AUTH_TYPE=epic -AUTH_LOGIN={username} -AUTH_PASSWORD=unused";
             Process FNprocess = new Process();
             string fullpath = path + shipping;
             FNprocess.StartInfo.Arguments = newArguments;
@@ -42,11 +43,11 @@ namespace FortniteLauncher.Common.Functions
             {
                 if (usePlatanium == true)
                 {
-                    InjectSSLbypass.InjectDll(FNprocess.Id, "LauncherData/Platanium.dll");
+                    InjectSSLbypass.InjectDll(FNprocess.Id, "LauncherData/PlataniumV2.dll");
                 }
                 else if (usePlatanium == false)
                 {
-                    InjectSSLbypass.InjectDll(FNprocess.Id, "LauncherData/AuroraNative.dll");
+                    InjectSSLbypass.InjectDll(FNprocess.Id, "LauncherData/Aurora.Runtime.dll");
                 }
             }
             if (suspendEAC)
