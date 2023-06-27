@@ -1,3 +1,5 @@
+# Outdated New Repo [Here](https://github.com/Jurij15/FortniteLauncherV2)
+
 # FortniteLauncher
 A simple launcher for LawinServer, made in C# with ModernWPF
 
